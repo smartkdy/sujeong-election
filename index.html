@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>여의도 수정아파트 재건축조합 — 임원·대의원 선거 안내</title>
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+:root{--bg:#f5f6f8;--card:#fff;--ink:#0f172a;--text:#1f2937;--muted:#6b7280;--faint:#9ca3af;--line:#e5e7eb;
+ --accent:#3b6dff;--accent-soft:#eef2ff;--navy:#0f2a52;}
+body{background:var(--bg);color:var(--text);line-height:1.55;font-size:15.5px;-webkit-font-smoothing:antialiased;
+ font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo",Roboto,sans-serif;
+ font-feature-settings:"ss01","tnum"}
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e293b 60%,#312e81 100%);color:#fff;padding:38px 22px 34px;text-align:center;border-bottom:1px solid var(--line)}
+.hero .tag{display:inline-block;background:#ef4444;color:#fff;font-size:12.5px;font-weight:800;letter-spacing:.05em;padding:3px 10px;border-radius:5px;margin-bottom:12px}
+.hero h1{font-size:24.5px;font-weight:800;letter-spacing:-.01em;line-height:1.35}
+.hero p{margin-top:10px;color:#cbd5e1;font-size:14.5px}
+.wrap{max-width:860px;margin:0 auto;padding:26px 18px 70px}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 22px 24px;margin-bottom:18px}
+.sh{display:flex;align-items:center;gap:9px;margin-bottom:4px}
+.sh .no{width:26px;height:26px;border-radius:8px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:14.5px;font-weight:800}
+.sh h2{font-size:18.5px;font-weight:800;color:var(--ink)}
+.sub{font-size:13.5px;color:var(--muted);margin:0 0 16px 35px}
+.total{text-align:center;margin:6px 0 18px}
+.total .n{font-size:48px;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1}
+.total .t{font-size:14.5px;color:var(--muted);margin-top:4px}
+.hemi-cap{text-align:center;font-size:13.5px;color:var(--muted);margin:6px auto 12px;max-width:540px;line-height:1.55}
+.hemi-cap b{color:var(--ink)}
+.seatwrap{margin:0 auto}
+.seat{transition:opacity .15s ease}
+.sf{position:absolute;width:0;height:0;opacity:0;pointer-events:none}
+#sf-jang:checked~.seatwrap .seat:not(.s-jang),#sf-gam:checked~.seatwrap .seat:not(.s-gam),#sf-isa:checked~.seatwrap .seat:not(.s-isa),#sf-a:checked~.seatwrap .seat:not(.s-a),#sf-b:checked~.seatwrap .seat:not(.s-b),#sf-c:checked~.seatwrap .seat:not(.s-c){opacity:.12}
+#sf-all:checked~.hemi-lg label[for=sf-all],#sf-all:checked~.roles label[for=sf-all]{outline:1.5px solid var(--accent);outline-offset:-1.5px;background:var(--accent-soft)}#sf-jang:checked~.hemi-lg label[for=sf-jang],#sf-jang:checked~.roles label[for=sf-jang]{outline:1.5px solid var(--accent);outline-offset:-1.5px;background:var(--accent-soft)}#sf-gam:checked~.hemi-lg label[for=sf-gam],#sf-gam:checked~.roles label[for=sf-gam]{outline:1.5px solid var(--accent);outline-offset:-1.5px;background:var(--accent-soft)}#sf-isa:checked~.hemi-lg label[for=sf-isa],#sf-isa:checked~.roles label[for=sf-isa]{outline:1.5px solid var(--accent);outline-offset:-1.5px;background:var(--accent-soft)}#sf-a:checked~.hemi-lg label[for=sf-a],#sf-a:checked~.roles label[for=sf-a]{outline:1.5px solid var(--accent);outline-offset:-1.5px;background:var(--accent-soft)}#sf-b:checked~.hemi-lg label[for=sf-b],#sf-b:checked~.roles label[for=sf-b]{outline:1.5px solid var(--accent);outline-offset:-1.5px;background:var(--accent-soft)}#sf-c:checked~.hemi-lg label[for=sf-c],#sf-c:checked~.roles label[for=sf-c]{outline:1.5px solid var(--accent);outline-offset:-1.5px;background:var(--accent-soft)}
+.hemi-lg{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:2px auto 20px;font-size:13px}
+.lgchip{cursor:pointer;display:inline-flex;align-items:center;padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);user-select:none}
+.lgchip i{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:6px;vertical-align:middle}
+.dot{width:15px;height:15px;border-radius:50%;display:inline-block;flex:0 0 auto}
+.c-jang{background:#ff2d8e}.c-gam{background:#a855f7}.c-isa{background:#3b6dff}
+.c-a{background:#0d9488}.c-b{background:#10b981}.c-c{background:#f59e0b}
+.dot.star-in{display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:10.5px;line-height:1}
+.role .dot.star-in{font-size:9.5px}
+.role.lead{border-color:#ffb3d6;background:#fff5fa}
+.roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:560px){.roles{grid-template-columns:1fr}}
+.role{display:block;cursor:pointer;border:1px solid var(--line);border-radius:11px;padding:13px 14px;background:#fbfcfe}
+.role-h{display:flex;align-items:center;gap:8px;margin-bottom:9px}
+.role-h b{font-size:15px;color:var(--ink);font-weight:700}
+.role-h .role-n{margin-left:auto;font-size:22.5px;font-weight:800;color:var(--ink)}
+.role-h .role-n small{font-size:12.5px;font-weight:600;color:var(--muted);margin-left:1px}
+.role .dots{display:flex;flex-wrap:wrap;gap:5px}
+.role .dot{width:13px;height:13px}
+.alloc{margin-top:4px}
+.alloc .bar{display:flex;height:34px;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.alloc .seg{display:flex;align-items:center;justify-content:center;color:#fff;font-size:13.5px;font-weight:700}
+.alloc .lg{display:flex;flex-wrap:wrap;gap:14px;margin-top:11px;font-size:13px;color:var(--muted)}
+.alloc .lg i{width:11px;height:11px;border-radius:3px;display:inline-block;margin-right:5px;vertical-align:middle}
+.note{background:#eff4ff;border-left:3px solid #3b6dff;border-radius:0 9px 9px 0;padding:11px 14px;font-size:13.5px;color:#1e3a5f;margin-top:14px;line-height:1.6}
+.note b{color:var(--navy)}
+.note.ok{background:#ecfdf5;border-left-color:#10b981;color:#065f46}
+.note.ok b{color:#047857}
+.reqgate{background:var(--navy);color:#fff;border-radius:14px;padding:18px 20px;margin:2px 0 12px;text-align:center}
+.reqgate .rg-lab{font-size:13px;font-weight:700;color:#fcd34d;letter-spacing:.02em;margin-bottom:7px}
+.reqgate .rg-main{font-size:19.5px;font-weight:800;line-height:1.45}
+.reqgate .rg-main b{color:#fcd34d}
+@media(max-width:560px){.reqgate .rg-main{font-size:17px}}
+.reqlead{text-align:center;font-size:13.5px;color:var(--muted);margin:0 0 10px}
+.reqs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:4px}
+@media(max-width:560px){.reqs{grid-template-columns:1fr}}
+.req{border:1px solid var(--line);border-radius:12px;padding:15px 14px;background:#fbfcfe;text-align:center}
+.req .ic{font-size:26.5px;line-height:1}
+.req b{display:block;font-size:15px;color:var(--ink);margin:8px 0 5px}
+.req p{font-size:13px;color:var(--muted);line-height:1.55}
+.req.hl{border-color:#fcd34d;background:#fffdf3}
+.req.hl b{color:#b45309}
+/* 간트 */
+.gantt{border:1px solid var(--line);border-radius:11px;background:#fff;overflow-x:auto;margin-top:4px}
+.gantt-in{min-width:640px;padding:16px 18px 12px}
+.gaxis{position:relative;height:16px;margin-left:172px;margin-bottom:4px}
+.gaxis span{position:absolute;top:0;transform:translateX(-50%);font-size:11px;color:var(--muted);white-space:nowrap}
+.gbody{display:flex}
+.glabels{flex:0 0 172px}
+.gl{height:34px;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;text-align:right;padding-right:12px}
+.gl b{font-size:12.5px;color:var(--ink);font-weight:700;line-height:1.25}
+.gl small{font-size:11px;color:var(--muted)}
+.gplot{position:relative;flex:1;height:340px}
+.gline{position:absolute;top:0;bottom:0;width:1px;background:var(--line)}
+.gvline{position:absolute;top:0;bottom:0;border-left:1.5px dashed #ef4444;opacity:.7}
+.gbar{position:absolute;height:16px;border-radius:5px}
+.gdot{position:absolute;transform:translate(-50%,0);font-size:13.5px;line-height:1}
+.glegend{display:flex;flex-wrap:wrap;gap:13px;margin-top:13px;margin-left:172px;font-size:11.5px;color:var(--muted)}
+.glegend .ln{display:inline-block;width:14px;border-top:1.5px dashed #ef4444;margin-right:5px;vertical-align:middle}
+.vote{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:560px){.vote{grid-template-columns:1fr}}
+.vcard{border:1px solid var(--line);border-radius:11px;padding:14px;text-align:center;background:#fbfcfe}
+.vcard .ic{font-size:24.5px}.vcard b{display:block;font-size:15px;color:var(--ink);margin:6px 0 3px}
+.vcard p{font-size:13px;color:var(--muted);line-height:1.5}
+.case-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:11px}
+.case-tbl{width:100%;border-collapse:collapse;font-size:12.5px;min-width:680px;table-layout:fixed}
+.case-tbl th,.case-tbl td{padding:7px 9px;text-align:left;border-bottom:1px solid #f1f5f9;vertical-align:top;line-height:1.45;word-break:break-word}
+.case-tbl th{font-size:12px;font-weight:700;color:var(--muted);background:#fafbfc;white-space:nowrap}
+.case-tbl td.n{text-align:center;color:var(--faint);font-weight:700}
+.case-tbl .ty{font-weight:700;color:var(--ink);display:block;margin-top:3px}
+.case-tbl tr:last-child td{border-bottom:none}
+.cat{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 6px;border-radius:5px;white-space:nowrap}
+.cat-1{background:#eff6ff;color:#1d4ed8}.cat-2{background:#fef2f2;color:#b91c1c}.cat-3{background:#fffbeb;color:#b45309}.cat-4{background:#ecfdf5;color:#047857}
+.sanc{font-size:11.5px;font-weight:600;color:#b91c1c}.sanc small{color:var(--faint);font-weight:400;display:block;font-size:10.5px}
+.src{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;background:#f1f5f9;padding:1px 5px;border-radius:4px;color:#475569;word-break:keep-all}
+.mcnote{font-size:12px;color:var(--muted);line-height:1.55;margin-top:10px}
+.report{background:#fef2f2;border:1.5px solid #fca5a5;border-radius:12px;padding:15px 17px;margin-top:14px;text-align:center}
+.report .t{font-size:15.5px;font-weight:800;color:#b91c1c;line-height:1.5}
+.callbtn{display:inline-block;margin-top:11px;background:#dc2626;color:#fff;font-weight:800;font-size:16px;padding:11px 22px;border-radius:999px;text-decoration:none;box-shadow:0 2px 6px rgba(220,38,38,.25)}
+.callbtn:active{background:#b91c1c}
+.report .c2{margin-top:9px;font-size:13.5px;color:var(--ink);font-weight:600}
+.report .rsub{margin-top:5px;font-size:12.5px;color:var(--muted)}
+.mt{position:absolute;opacity:0;width:0;height:0;pointer-events:none}
+.tabnav{display:flex;gap:0;border-bottom:1px solid var(--line);margin-bottom:22px}
+.tabnav label{flex:1;text-align:center;cursor:pointer;padding:11px 2px;font-weight:700;font-size:16px;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tabnav label:hover{color:var(--ink)}
+#tab-1:checked~.tabnav label[for=tab-1],#tab-2:checked~.tabnav label[for=tab-2]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabpane{display:none}
+#tab-1:checked~#pane-1,#tab-2:checked~#pane-2{display:block}
+.p2intro{font-size:14px;color:var(--muted);text-align:center;margin:2px 0 14px}
+.p2intro b{color:var(--ink)}
+.st2{position:absolute;opacity:0;width:0;height:0;pointer-events:none}
+.subnav{display:flex;gap:8px;margin-bottom:16px}
+.subnav label{flex:1;text-align:center;cursor:pointer;padding:9px 6px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--text);font-weight:700;font-size:14.5px;white-space:nowrap;box-shadow:0 1px 0 rgba(15,23,42,0.02)}
+.subnav label:hover{border-color:var(--accent);color:var(--accent)}
+.subpane{display:none}
+#rt-gjang:checked~.subnav label[for=rt-gjang]{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}#rt-gam:checked~.subnav label[for=rt-gam]{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}#rt-isa:checked~.subnav label[for=rt-isa]{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}#rt-dae:checked~.subnav label[for=rt-dae]{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}#rt-gjang:checked~#rp-gjang,#rt-gam:checked~#rp-gam,#rt-isa:checked~#rp-isa,#rt-dae:checked~#rp-dae{display:block}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:12px}
+.rch{font-size:15.5px;font-weight:800;color:var(--ink);margin-bottom:10px;overflow:hidden}
+.rch span{float:right;font-size:12px;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:3px 11px;border-radius:999px;margin-top:1px;white-space:nowrap}
+.rcard>p{font-size:14.5px;color:var(--text);line-height:1.6;margin:0}
+.rnote{margin-top:12px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0;padding:11px 14px;font-size:13.5px;color:var(--text);line-height:1.6}
+.rnote b{color:var(--ink)}
+.rmini{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.55}
+.rmini b{color:var(--ink)}
+.cautlist{list-style:none;display:flex;flex-direction:column;gap:7px;margin:0;padding:0}
+.cautlist li{font-size:13.5px;color:var(--text);line-height:1.5;padding-left:15px;position:relative}
+.cautlist li::before{content:'•';position:absolute;left:2px;color:var(--accent);font-weight:800}
+.cautlist li b{color:var(--ink)}
+.note.warn{background:#fffbeb;border-left-color:#f59e0b;color:#92400e}
+.note.warn b{color:#b45309}
+.kv{font-size:14.5px;color:var(--text);padding:8px 0;border-bottom:1px solid #f1f5f9}
+.kv b{display:inline-block;min-width:96px;color:var(--muted);font-weight:700;font-size:13px;margin-right:6px}
+.cl-title{font-weight:700;color:var(--ink);font-size:14.5px;margin:15px 0 9px}
+.checklist{list-style:none;display:flex;flex-direction:column;gap:8px}
+.checklist li{font-size:14px;color:var(--text);line-height:1.5;padding-left:26px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:3px;top:0;color:#059669;font-weight:800}
+.checklist li b{color:var(--ink)}
+.dtag{display:inline-block;font-size:10.5px;font-weight:800;padding:1px 8px;border-radius:999px;margin-right:8px;vertical-align:middle;letter-spacing:.02em}
+.dtag.req{background:var(--accent-soft);color:var(--accent)}
+.dtag.opt{background:#f1f5f9;color:var(--muted)}
+.dodont{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ddcard{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.ddh{font-weight:800;font-size:14.5px;padding:10px 14px;color:#fff}
+.ddh.ok{background:#059669}.ddh.no{background:#dc2626}
+.ddcard ul{list-style:none;padding:11px 14px;display:flex;flex-direction:column;gap:7px}
+.ddcard li{font-size:13.5px;color:var(--text);line-height:1.5;padding-left:13px;position:relative}
+.ddcard li::before{content:'·';position:absolute;left:2px;color:var(--muted);font-weight:800}
+@media(max-width:560px){.dodont{grid-template-columns:1fr}}
+footer{text-align:center;color:var(--faint);font-size:12.5px;padding:8px 18px 0;line-height:1.7}
+</style></head><body>
+
+<div class="hero">
+  <span class="tag">선거관리위원회 · 선거 안내</span>
+  <h1>여의도 수정아파트 재건축조합<br>임원·대의원 선거 안내</h1>
+  <p>누구를 몇 명 뽑는지, 언제 어떻게 진행되는지 한눈에</p>
+</div>
+
+<div class="wrap">
+  <input class="mt" type="radio" name="maintab" id="tab-1" checked><input class="mt" type="radio" name="maintab" id="tab-2"><div class="tabnav"><label for="tab-1">📋 선거 안내</label><label for="tab-2">📝 후보 등록 안내</label></div>
+  <div class="tabpane" id="pane-1">
+
+  <div class="sec">
+    <div class="sh"><span class="no">1</span><h2>무엇을 뽑나요</h2></div>
+    <p class="sub">이번 선거에서 선출하는 임원·대의원입니다</p>
+    <div class="total"><div class="n">47<span style="font-size:24.5px"> 명</span></div><div class="t">총 선출 인원 (임원 8 + 대의원 39)</div></div>
+    <input class="sf" type="radio" name="sfocus" id="sf-all" checked><input class="sf" type="radio" name="sfocus" id="sf-jang"><input class="sf" type="radio" name="sfocus" id="sf-gam"><input class="sf" type="radio" name="sfocus" id="sf-isa"><input class="sf" type="radio" name="sfocus" id="sf-a"><input class="sf" type="radio" name="sfocus" id="sf-b"><input class="sf" type="radio" name="sfocus" id="sf-c">
+    <div class="seatwrap"><svg viewBox="0 0 260 141" style="width:100%;max-width:440px;height:auto;display:block;margin:8px auto 2px"><circle class="seat s-jang" cx="130" cy="127" r="7" fill="#ff2d8e"/><polygon class="seat s-jang" points="130.00,122.60 131.09,125.50 134.18,125.64 131.76,127.57 132.59,130.56 130.00,128.85 127.41,130.56 128.24,127.57 125.82,125.64 128.91,125.50" fill="#fff"/><circle class="seat s-gam" cx="169.0" cy="117.1" r="7" fill="#a855f7"/><circle class="seat s-isa" cx="161.3" cy="101.1" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="147.4" cy="90.0" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="130.0" cy="86.0" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="112.6" cy="90.0" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="98.7" cy="101.1" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="91.0" cy="117.1" r="7" fill="#3b6dff"/><circle class="seat s-a" cx="191.2" cy="116.3" r="7" fill="#0d9488"/><circle class="seat s-a" cx="185.2" cy="97.9" r="7" fill="#0d9488"/><circle class="seat s-a" cx="173.8" cy="82.2" r="7" fill="#0d9488"/><circle class="seat s-a" cx="158.1" cy="70.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="139.7" cy="64.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="120.3" cy="64.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="101.9" cy="70.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="86.2" cy="82.2" r="7" fill="#0d9488"/><circle class="seat s-a" cx="74.8" cy="97.9" r="7" fill="#0d9488"/><circle class="seat s-a" cx="68.8" cy="116.3" r="7" fill="#0d9488"/><circle class="seat s-a" cx="213.4" cy="115.9" r="7" fill="#0d9488"/><circle class="seat s-a" cx="208.5" cy="96.2" r="7" fill="#0d9488"/><circle class="seat s-a" cx="199.1" cy="78.3" r="7" fill="#0d9488"/><circle class="seat s-a" cx="185.7" cy="63.1" r="7" fill="#0d9488"/><circle class="seat s-b" cx="169.0" cy="51.6" r="7" fill="#10b981"/><circle class="seat s-b" cx="150.1" cy="44.4" r="7" fill="#10b981"/><circle class="seat s-b" cx="130.0" cy="42.0" r="7" fill="#10b981"/><circle class="seat s-b" cx="109.9" cy="44.4" r="7" fill="#10b981"/><circle class="seat s-b" cx="91.0" cy="51.6" r="7" fill="#10b981"/><circle class="seat s-b" cx="74.3" cy="63.1" r="7" fill="#10b981"/><circle class="seat s-b" cx="60.9" cy="78.3" r="7" fill="#10b981"/><circle class="seat s-b" cx="51.5" cy="96.2" r="7" fill="#10b981"/><circle class="seat s-b" cx="46.6" cy="115.9" r="7" fill="#10b981"/><circle class="seat s-b" cx="235.5" cy="115.6" r="7" fill="#10b981"/><circle class="seat s-b" cx="231.4" cy="95.2" r="7" fill="#10b981"/><circle class="seat s-b" cx="223.5" cy="76.0" r="7" fill="#10b981"/><circle class="seat s-b" cx="211.9" cy="58.8" r="7" fill="#10b981"/><circle class="seat s-b" cx="197.2" cy="44.1" r="7" fill="#10b981"/><circle class="seat s-c" cx="180.0" cy="32.5" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="160.8" cy="24.6" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="140.4" cy="20.5" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="119.6" cy="20.5" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="99.2" cy="24.6" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="80.0" cy="32.5" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="62.8" cy="44.1" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="48.1" cy="58.8" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="36.5" cy="76.0" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="28.6" cy="95.2" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="24.5" cy="115.6" r="7" fill="#f59e0b"/></svg></div>
+    <p class="hemi-cap">맨 앞 <b style="color:#ff2d8e">★조합장</b>, 그 뒤 <b style="color:#a855f7">감사·이사</b>(집행부), 바깥 호에 <b style="color:#0d9488">대의원 39명</b>이 펼쳐진 구성 · <b>역할(아래 칩·카드)을 누르면</b> 해당 의석만 강조됩니다</p>
+    <div class="hemi-lg"><label class="lgchip" for="sf-all">전체 보기</label><label class="lgchip" for="sf-jang"><i style="background:#ff2d8e"></i>조합장★ 1</label><label class="lgchip" for="sf-gam"><i style="background:#a855f7"></i>감사 1</label><label class="lgchip" for="sf-isa"><i style="background:#3b6dff"></i>이사 6</label><label class="lgchip" for="sf-a"><i style="background:#0d9488"></i>대의원 A 14</label><label class="lgchip" for="sf-b"><i style="background:#10b981"></i>대의원 B 14</label><label class="lgchip" for="sf-c"><i style="background:#f59e0b"></i>대의원 C 11</label></div>
+    <div class="roles"><label class="role lead" for="sf-jang"><div class="role-h"><svg class="dot" viewBox="0 0 16 16" style="vertical-align:middle"><circle cx="8" cy="8" r="8" fill="#ff2d8e"/><polygon points="8.00,3.40 9.14,6.44 12.37,6.58 9.84,8.60 10.70,11.72 8.00,9.93 5.30,11.72 6.16,8.60 3.63,6.58 6.86,6.44" fill="#fff"/></svg><b>조합장</b><span class="role-n">1<small>명</small></span></div><div class="dots"><svg class="dot" viewBox="0 0 16 16" style="vertical-align:middle"><circle cx="8" cy="8" r="8" fill="#ff2d8e"/><polygon points="8.00,3.40 9.14,6.44 12.37,6.58 9.84,8.60 10.70,11.72 8.00,9.93 5.30,11.72 6.16,8.60 3.63,6.58 6.86,6.44" fill="#fff"/></svg></div></label><label class="role" for="sf-gam"><div class="role-h"><span class="dot c-gam"></span><b>감사</b><span class="role-n">1<small>명</small></span></div><div class="dots"><span class="dot c-gam"></span></div></label><label class="role" for="sf-isa"><div class="role-h"><span class="dot c-isa"></span><b>이사</b><span class="role-n">6<small>명</small></span></div><div class="dots"><span class="dot c-isa"></span><span class="dot c-isa"></span><span class="dot c-isa"></span><span class="dot c-isa"></span><span class="dot c-isa"></span><span class="dot c-isa"></span></div></label><label class="role" for="sf-a"><div class="role-h"><span class="dot c-a"></span><b>대의원 · A동</b><span class="role-n">14<small>명</small></span></div><div class="dots"><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span></div></label><label class="role" for="sf-b"><div class="role-h"><span class="dot c-b"></span><b>대의원 · B동</b><span class="role-n">14<small>명</small></span></div><div class="dots"><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span></div></label><label class="role" for="sf-c"><div class="role-h"><span class="dot c-c"></span><b>대의원 · C동</b><span class="role-n">11<small>명</small></span></div><div class="dots"><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span></div></label></div>
+  </div>
+
+  <div class="sec">
+    <div class="sh"><span class="no">2</span><h2>대의원 39명 — 동별 배정</h2></div>
+    <p class="sub">각 동에 사는 <b>세대 수에 맞춰</b> 나눴습니다</p>
+    <div class="alloc">
+      <div class="bar">
+        <div class="seg" style="flex:14;background:#0d9488">A동 14</div>
+        <div class="seg" style="flex:14;background:#10b981">B동 14</div>
+        <div class="seg" style="flex:11;background:#f59e0b">C동 11</div>
+      </div>
+      <div class="lg">
+        <span><i style="background:#0d9488"></i>A동 14명</span>
+        <span><i style="background:#10b981"></i>B동 14명</span>
+        <span><i style="background:#f59e0b"></i>C동 11명</span>
+        <span>합계 39명</span>
+      </div>
+    </div>
+    <div class="note">각 동의 <b>세대 수에 맞춰</b> 나눠, 동별 의견이 <b>비율대로 골고루</b> 반영되도록 했습니다. 어느 동에 후보가 모자라면, 그만큼은 동 구분 없이 <b>표를 많이 받은 순서</b>로 채웁니다.</div>
+  </div>
+
+  <div class="sec">
+    <div class="sh"><span class="no">3</span><h2>대의원, 누구나 도전할 수 있어요</h2></div>
+    <p class="sub">등록 문턱이 낮습니다 — 복잡한 서류 없이 <b>추천 5명</b>이면 충분</p>
+    <div class="reqgate">
+      <div class="rg-lab">✔ 기본 자격은 딱 하나</div>
+      <div class="rg-main">우리 구역에 집(부동산)을 <b>1년 이상 가지고 있는</b> 조합원이면 됩니다</div>
+    </div>
+    <p class="reqlead">기본 자격만 맞으면, 등록은 이렇게 간단합니다 👇</p>
+    <div class="reqs">
+      <div class="req"><div class="ic">📝</div><b>학력·경력 안 써도 OK</b><p>이력서·학력 제출은 <b>선택</b>이에요. 안 적어도 등록됩니다.</p></div>
+      <div class="req"><div class="ic">🤝</div><b>조합원 5명 추천</b><p>이웃 조합원 <b>5명</b>의 추천만 받으면 후보 등록 끝!</p></div>
+      <div class="req hl"><div class="ic">⭐</div><b>추천은 중복돼도 OK</b><p>한 분이 <b>여러 후보를 함께 추천</b>할 수 있어요. 그래서 추천받기 쉽습니다.</p></div>
+    </div>
+    <div class="note ok">💡 <b>많이 등록할수록 유리해요!</b> 대의원은 동별로 최소 인원이 정해져 있고, 중간에 그만두는 사람이 생기면 <b>같은 동에서 먼저</b> 다음 순번에게 자리가 돌아갑니다.</div>
+    <div class="note">👴👵 <b>어르신도 부담 갖지 마세요.</b> 어려운 절차나 서류 없이, 추천 5명이면 누구나 도전할 수 있습니다. 일단 등록해 보세요!</div>
+  </div>
+
+  <div class="sec">
+    <div class="sh"><span class="no">4</span><h2>선거 일정</h2></div>
+    <p class="sub">2026년 7~8월 · 주요 일정 (후보 등록 상황·회의 일정에 따라 바뀔 수 있음)</p>
+    <div class="gantt"><div class="gantt-in">
+      <div class="gaxis"><span style="left:0.833%">7/3</span><span style="left:17.5%">7/13</span><span style="left:29.167%">7/20</span><span style="left:54.167%">8/4</span><span style="left:60.833%">8/8</span><span style="left:84.167%">8/22</span><span style="left:99.167%">8/31</span></div>
+      <div class="gbody">
+        <div class="glabels"><div class="gl"><b>협의체 4차회의</b><small>7/3 (금) · 계획 확정</small></div><div class="gl"><b>명단 확인·후보 등록 안내</b><small>7/6 (월)</small></div><div class="gl"><b>명단 확인 · 후보 등록</b><small>7/7~7/14</small></div><div class="gl"><b>후보 자격 확인</b><small>7/15~7/17</small></div><div class="gl"><b>후보 번호(기호) 정하기</b><small>7/15 (수)</small></div><div class="gl"><b>후보·선거일 확정 발표</b><small>7/20 (월)</small></div><div class="gl"><b>창립총회 (협의체 5차)</b><small>8/4 (화)</small></div><div class="gl"><b>선거 안내문·투표용지 발송</b><small>8/7 (금)</small></div><div class="gl"><b>우편·전자 투표</b><small>8/8~8/21</small></div><div class="gl"><b>투표·개표·당선 발표</b><small>8/22 (토)</small></div></div>
+        <div class="gplot">
+          <div class="gline" style="left:5.0%"></div><div class="gline" style="left:16.667%"></div><div class="gline" style="left:28.333%"></div><div class="gline" style="left:40.0%"></div><div class="gline" style="left:51.667%"></div><div class="gline" style="left:63.333%"></div><div class="gline" style="left:75.0%"></div><div class="gline" style="left:86.667%"></div><div class="gline" style="left:98.333%"></div>
+          <div class="gvline" style="left:84.167%"></div>
+          <div class="gdot" style="top:7px;left:0.833%;color:#0f172a">◆</div><div class="gdot" style="top:41px;left:5.833%;color:#475569">◆</div><div class="gbar" style="top:77px;left:6.667%;width:13.333%;background:#3b6dff"></div><div class="gbar" style="top:111px;left:20.0%;width:5.0%;background:#0d9488"></div><div class="gdot" style="top:143px;left:20.833%;color:#475569">◆</div><div class="gdot" style="top:177px;left:29.167%;color:#3b6dff">◆</div><div class="gdot" style="top:211px;left:54.167%;color:#7c3aed">◆</div><div class="gdot" style="top:245px;left:59.167%;color:#475569">◆</div><div class="gbar" style="top:281px;left:60.0%;width:23.333%;background:#7c3aed"></div><div class="gdot" style="top:313px;left:84.167%;color:#ef4444">◆</div>
+        </div>
+      </div>
+      <div class="glegend"><span>◆ 주요 시점</span><span style="color:#3b6dff">▬ 명단·후보 등록</span><span style="color:#0d9488">▬ 자격 확인</span><span style="color:#7c3aed">▬ 투표</span><span><i class="ln"></i>선거일(8/22)</span></div>
+    </div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sh"><span class="no">5</span><h2>투표 방법</h2></div>
+    <p class="sub">세 가지 방법 중 편한 방법으로 한 번만 투표하시면 됩니다</p>
+    <div class="vote">
+      <div class="vcard"><div class="ic">✉️</div><b>우편 투표</b><p>8/8~8/21<br>받은 봉투에 넣어 보내기</p></div>
+      <div class="vcard"><div class="ic">📱</div><b>전자 투표</b><p>8/8~8/21<br>안내 링크로 모바일 투표</p></div>
+      <div class="vcard"><div class="ic">🗳️</div><b>현장 투표</b><p>8/22 (선거일)<br>투표소 방문해서 투표</p></div>
+    </div>
+    <div class="note">⚠️ 우편·전자·현장 중 <b>한 가지로</b> 투표하시면 됩니다. 둘 이상 경로로 투표한 경우 <b>전자투표를 우선 인정</b>합니다.</div>
+  </div>
+
+  <div class="sec">
+    <div class="sh"><span class="no">6</span><h2>이런 행위는 ‘부정행위’예요</h2></div>
+    <p class="sub">공정한 선거를 위한 약속입니다 — 선거운동 기간 중 아래 행위를 보시면 <b>바로 선관위에 신고</b>해 주세요</p>
+    <div class="case-wrap"><table class="case-tbl"><colgroup><col style="width:5%"><col style="width:22%"><col style="width:44%"><col style="width:13%"><col style="width:16%"></colgroup><thead><tr><th>#</th><th>유형</th><th>구체 사례 (쉽게)</th><th>근거</th><th>제재</th></tr></thead><tbody><tr><td class="n">1</td><td><span class="cat cat-1">등록·추천</span><span class="ty">등록서류 허위·위조</span></td><td>학력·경력이나 소유·거주 자격 증빙을 거짓으로 꾸미거나 위조해 제출. (※ 학력은 졸업증명서, 경력은 건강보험 자격득실확인서만 인정)</td><td><span class="src">제16조③1</span></td><td class="sanc">등록취소·당선무효</td></tr><tr><td class="n">2</td><td><span class="cat cat-1">등록·추천</span><span class="ty">선거공보 허위·비방 기재</span></td><td>공보(홍보물)에 거짓 약력을 싣거나 상대 후보를 비방하는 내용을 기재.</td><td><span class="src">제30조②·제28조④</span></td><td class="sanc">등록취소·당선무효</td></tr><tr><td class="n">3</td><td><span class="cat cat-3">선거운동</span><span class="ty">상대 후보 허위사실 공표·비방</span></td><td>연설·문자·SNS·벽보로 거짓 사실을 퍼뜨려 상대 후보를 깎아내림.</td><td><span class="src">제28조④</span></td><td class="sanc">등록취소·당선무효<small>형사 소지</small></td></tr><tr><td class="n">4</td><td><span class="cat cat-1">등록·추천</span><span class="ty">추천서 위조·서명 도용</span></td><td>추천인의 동의 없이 서명·지장을 임의로 채워 추천서를 만듦.</td><td><span class="src">제16조③1</span></td><td class="sanc">등록취소</td></tr><tr><td class="n">5</td><td><span class="cat cat-2">매수·기부</span><span class="ty">추천 매수</span></td><td>추천(서명) 대가로 돈·향응을 제공해 추천서를 모음.</td><td><span class="src">제16조③3·제29조</span></td><td class="sanc">등록취소·당선무효<small>형사 소지</small></td></tr><tr><td class="n">6</td><td><span class="cat cat-1">등록·추천</span><span class="ty">본인 추천·중복추천 위반</span></td><td>자기 자신을 추천하거나, 한 선거인이 조합장 후보를 둘 이상 중복 추천.</td><td><span class="src">제24조①</span></td><td class="sanc">추천 무효·등록취소</td></tr><tr><td class="n">7</td><td><span class="cat cat-2">매수·기부</span><span class="ty">선거인 표 매수</span></td><td>찍어달라며 선거인에게 금품·식사·상품권 등을 제공.</td><td><span class="src">제29조①·제28조②</span></td><td class="sanc">등록취소·당선무효<small>형사 소지</small></td></tr><tr><td class="n">8</td><td><span class="cat cat-2">매수·기부</span><span class="ty">매수 수수·승낙 (받는 쪽)</span></td><td>후보 측이 주는 금품·이익을 선거인이 받거나 받기로 약속.</td><td><span class="src">제28조②</span></td><td class="sanc">제공·수수 양쪽 위반</td></tr><tr><td class="n">9</td><td><span class="cat cat-2">매수·기부</span><span class="ty">기부행위 (우회 포함)</span></td><td>후보·가족·관련 회사 명의로 선거인에게 식사·선물·찬조금 등 제공.</td><td><span class="src">제29조①④</span></td><td class="sanc">등록취소·당선무효<small>형사 소지</small></td></tr><tr><td class="n">10</td><td><span class="cat cat-3">선거운동</span><span class="ty">사전 선거운동</span></td><td>후보 확정공고(7/20) 전에 미리 지지를 호소하거나 홍보.</td><td><span class="src">제16조③5·제28조⑥</span></td><td class="sanc">등록취소·당선무효</td></tr><tr><td class="n">11</td><td><span class="cat cat-2">매수·기부</span><span class="ty">후보 사퇴·출마포기 매수</span></td><td>다른 후보(또는 입후보 예정자)에게 사퇴하거나 출마를 포기하는 대가로 금품·이익을 제공하거나 약속.</td><td><span class="src">제28조②·제29조</span></td><td class="sanc">등록취소·당선무효<small>형사 소지</small></td></tr><tr><td class="n">12</td><td><span class="cat cat-3">선거운동</span><span class="ty">정해진 방법 외 선거운동</span></td><td>무단 현수막·대량 문자/카톡, 호별 방문 등 선관위가 정한 방법 밖의 운동.</td><td><span class="src">제28조⑤</span></td><td class="sanc">위반물 삭제·제재·등록취소</td></tr><tr><td class="n">13</td><td><span class="cat cat-3">선거운동</span><span class="ty">야간·대리 전화/문자 운동</span></td><td>밤 10시~아침 7시 전화·문자 발송, 또는 후보 본인이 아닌 사람이 전화운동(대리). (※ 문자·카톡은 공유받은 선거인명부를 통해 발송 가능)</td><td><span class="src">제33조①1</span></td><td class="sanc">제재·등록취소</td></tr><tr><td class="n">14</td><td><span class="cat cat-1">등록·추천</span><span class="ty">피선거권 요건 허위</span></td><td>소유 5년/거주 1년 등 자격을 충족하지 못했는데 충족한 것처럼 등록.</td><td><span class="src">제6조·제16조①④</span></td><td class="sanc">등록취소·당선무효</td></tr><tr><td class="n">15</td><td><span class="cat cat-4">투표</span><span class="ty">대리·강요·매수 투표</span></td><td>남의 우편투표지를 대신 작성하거나, 특정 후보 투표를 강요·매수.</td><td><span class="src">제34조</span></td><td class="sanc">해당 투표 무효·당선무효<small>형사 소지</small></td></tr><tr><td class="n">16</td><td><span class="cat cat-1">등록·추천</span><span class="ty">공명선거 서약서 위반</span></td><td>등록 시 제출한 '공명선거 실천 서약'의 내용(비방·금지된 운동 안 함 등)을 어김.</td><td><span class="src">제16조③2</span></td><td class="sanc">등록취소·당선무효</td></tr><tr><td class="n">17</td><td><span class="cat cat-4">투표·기타</span><span class="ty">선거인명부 부정 이용</span></td><td>교부받은 선거인명부를 선거 외 목적으로 쓰거나 타인에게 넘김(양도·대여).</td><td><span class="src">제22조③</span></td><td class="sanc">등록취소·당선무효<small>형사 소지</small></td></tr><tr><td class="n">18</td><td><span class="cat cat-4">투표·기타</span><span class="ty">조합·업체 지위 이용 개입</span></td><td>조합 임직원·계약업체가 중립의무를 어기고 특정 후보를 지원하거나 선거에 개입.</td><td><span class="src">제12조</span></td><td class="sanc">중립의무 위반·직무 배제</td></tr><tr><td class="n">19</td><td><span class="cat cat-4">투표·기타</span><span class="ty">투표용지·투표함 부정</span></td><td>선관위 사인(날인) 없는 용지 사용, 무효표 조작, 투표함 훼손·바꿔치기.</td><td><span class="src">제34·38조</span></td><td class="sanc">해당 투표 무효·당선무효<small>형사 소지</small></td></tr><tr><td class="n">20</td><td><span class="cat cat-3">선거운동</span><span class="ty">선거사무원 정원초과·미등록</span></td><td>선거사무원을 가족 외 1명을 초과해 두거나, 선관위에 등록하지 않은 사람을 선거운동에 동원. (선거사무원은 가족 제외 1명으로 확정)</td><td><span class="src">제33조①6</span></td><td class="sanc">제재·등록취소</td></tr></tbody></table></div>
+    <div class="mcnote">※ 위 사례는 선거관리규정(안) v4 조항을 근거로 한 예시이며, 실제 위반 여부·제재 수위는 사실관계와 선관위 의결, 관련 법령(공직선거법 준용 등)에 따릅니다. 적발 시 선관위는 5일 이내 의결로 등록취소·당선무효를 결정하며, 결정 전 해당 후보에게 3일 범위의 소명 기회를 부여합니다(제16조④⑤).</div>
+    <div class="report">
+      <div class="t">🚨 부정행위를 보셨나요? 바로 선관위에 알려주세요</div>
+      <a class="callbtn" href="tel:070-7543-1858">📞 070-7543-1858 · 전화 신고</a>
+      <div class="c2">선관위 사무실 (코오롱포레스텔 306호)</div>
+      <div class="rsub">익명으로 신고할 수 있고, 신고자 신원은 비공개로 보호됩니다.</div>
+    </div>
+  </div>
+
+  </div><!-- /pane-1 -->
+  <div class="tabpane" id="pane-2"><p class="p2intro">어느 직위에 도전하시나요? <b>직위를 선택</b>하시면 맞춤 안내가 나옵니다.</p><input class="st2" type="radio" name="subtab" id="rt-gjang" checked><input class="st2" type="radio" name="subtab" id="rt-gam"><input class="st2" type="radio" name="subtab" id="rt-isa"><input class="st2" type="radio" name="subtab" id="rt-dae"><div class="subnav"><label for="rt-gjang">조합장</label><label for="rt-gam">감사</label><label for="rt-isa">이사</label><label for="rt-dae">대의원</label></div><div class="subpane" id="rp-gjang"><div class="rcard"><div class="rch">① 자격 요건</div><p>사업구역 내 부동산을 <b>5년 이상 소유</b>, 또는 <b>직전 3년 중 1년 이상 거주</b>한 조합원</p><div class="rnote">📍 <b>조합장은 당선 후 거주 의무가 있습니다</b><br>소유 요건만으로 당선되더라도, 조합장은 <b>당선(선임)일부터 관리처분계획인가를 받을 때까지</b> 정비구역 안에 <b>거주</b>해야 합니다. 상가 소유자는 그곳에서 영업하면 거주로 인정됩니다. (도시정비법 제41조 · 감사·이사에는 없는 조합장만의 의무)</div><div class="rmini">⚠️ 미성년자·피성년/한정후견인, 파산 후 미복권, 금고 이상 실형(집행 종료 후 2년 미경과)·집행유예 기간 중, 벌금 100만원 이상(10년 미경과), 면직 후 2년 미경과, 해당 사업 시공자·관련 업체 임직원 등은 후보가 될 수 없습니다.</div></div><div class="rcard"><div class="rch"><span>추천 30명 · 중복불가</span>② 제출 서류</div><ul class="checklist"><li><span class="dtag req">필수</span>후보자 등록 신청서 (규정 서식)</li><li><span class="dtag req">필수</span>추천서 (규정 서식)</li><li><span class="dtag req">필수</span>신분증 사본 (주민등록증·여권 등)</li><li><span class="dtag opt">선택</span>가족관계증명서 (배우자·직계존비속이 대신 제출할 때만)</li><li><span class="dtag req">필수</span>반명함판 사진 2매</li><li><span class="dtag req">필수</span>주민등록 등본·초본</li><li><span class="dtag req">필수</span>토지·건물 등기부등본 (소유 증명)</li><li><span class="dtag opt">선택</span>학력·경력 증명 — 졸업증명서·건강보험 자격득실확인서만 인정</li><li><span class="dtag req">필수</span>범죄·수사경력 조회 신청서</li><li><span class="dtag req">필수</span>공명선거 실천 서약서 (규정 서식)</li></ul><div class="rmini"><b>추천 요건</b> — 선거인 30명 이상 (중복 추천 불가 — 한 사람이 조합장 후보 1명만) · 본인 추천 불가 · 학력·경력은 안 내도 등록(거짓 기재 시 무효)</div></div><div class="rcard"><div class="rch">③ 가능한 선거활동</div><div class="dodont"><div class="ddcard"><div class="ddh ok">✅ 할 수 있어요</div><ul><li>후보 본인 + 등록 선거운동원 1명(+가족)이 운동</li><li>전화·문자·SNS·단톡방으로 지지 호소</li><li>명함 배포 · 어깨띠 착용 거리 홍보</li><li>선거공보 제출 — 기호추첨 후 2일 내 (선택 · A4 1장(양면 가능))</li><li>현수막·포스터 게시·부착 가능 (※ 조합장 후보만 허용)</li></ul></div><div class="ddcard"><div class="ddh no">🚫 하면 안 돼요</div><ul><li>후보끼리 연대 홍보·공동 운동</li><li>집집마다 방문(호별 방문)</li><li>전화는 후보 본인만 · 밤 10시~아침 7시 금지</li><li>거짓 사실·상대 비방, 금품·식사 제공</li><li>기간 전에 미리 운동(사전 선거운동)</li></ul></div></div></div><div class="rcard"><div class="rch">④ 유의사항</div><ul class="cautlist"><li>이 선거에서 <b>조합장 1명</b>을 선출합니다.</li><li>후보가 1명이어도 <b>총회에서 찬·반 투표</b>로 당선이 결정됩니다.</li><li>거짓 서류·매수·비방·사전운동 등은 <b>등록취소·당선무효</b> 사유입니다.</li><li>등록 시 낸 <b>공명선거 실천 서약</b>을 어기면 불이익을 받습니다.</li><li>선거운동은 <b>후보 확정공고(7/20) 다음날 ~ 선거일(8/22) 전일</b>에만 가능합니다.</li></ul></div></div><div class="subpane" id="rp-gam"><div class="rcard"><div class="rch">① 자격 요건</div><p>사업구역 내 부동산을 <b>5년 이상 소유</b>, 또는 <b>직전 3년 중 1년 이상 거주</b>한 조합원</p><div class="rmini">⚠️ 미성년자·피성년/한정후견인, 파산 후 미복권, 금고 이상 실형(집행 종료 후 2년 미경과)·집행유예 기간 중, 벌금 100만원 이상(10년 미경과), 면직 후 2년 미경과, 해당 사업 시공자·관련 업체 임직원 등은 후보가 될 수 없습니다.</div></div><div class="rcard"><div class="rch"><span>추천 10명 · 중복가능</span>② 제출 서류</div><ul class="checklist"><li><span class="dtag req">필수</span>후보자 등록 신청서 (규정 서식)</li><li><span class="dtag req">필수</span>추천서 (규정 서식)</li><li><span class="dtag req">필수</span>신분증 사본 (주민등록증·여권 등)</li><li><span class="dtag opt">선택</span>가족관계증명서 (배우자·직계존비속이 대신 제출할 때만)</li><li><span class="dtag req">필수</span>반명함판 사진 2매</li><li><span class="dtag req">필수</span>주민등록 등본·초본</li><li><span class="dtag req">필수</span>토지·건물 등기부등본 (소유 증명)</li><li><span class="dtag opt">선택</span>학력·경력 증명 — 졸업증명서·건강보험 자격득실확인서만 인정</li><li><span class="dtag req">필수</span>범죄·수사경력 조회 신청서</li><li><span class="dtag req">필수</span>공명선거 실천 서약서 (규정 서식)</li></ul><div class="rmini"><b>추천 요건</b> — 선거인 10명 이상 (중복 추천 가능) · 본인 추천 불가 · 학력·경력은 안 내도 등록(거짓 기재 시 무효)</div></div><div class="rcard"><div class="rch">③ 가능한 선거활동</div><div class="dodont"><div class="ddcard"><div class="ddh ok">✅ 할 수 있어요</div><ul><li>후보 본인 + 등록 선거운동원 1명(+가족)이 운동</li><li>전화·문자·SNS·단톡방으로 지지 호소</li><li>명함 배포 · 어깨띠 착용 거리 홍보</li><li>선거공보 제출 — 기호추첨 후 2일 내 (선택 · A4 1장(양면 가능))</li></ul></div><div class="ddcard"><div class="ddh no">🚫 하면 안 돼요</div><ul><li>후보끼리 연대 홍보·공동 운동</li><li>현수막·포스터 게시·부착</li><li>집집마다 방문(호별 방문)</li><li>전화는 후보 본인만 · 밤 10시~아침 7시 금지</li><li>거짓 사실·상대 비방, 금품·식사 제공</li><li>기간 전에 미리 운동(사전 선거운동)</li></ul></div></div></div><div class="rcard"><div class="rch">④ 유의사항</div><ul class="cautlist"><li>이 선거에서 <b>감사 1명</b>을 선출합니다.</li><li>후보 수가 정수(1명)와 같으면 <b>무투표 당선</b>으로 결정됩니다.</li><li>거짓 서류·매수·비방·사전운동 등은 <b>등록취소·당선무효</b> 사유입니다.</li><li>등록 시 낸 <b>공명선거 실천 서약</b>을 어기면 불이익을 받습니다.</li><li>선거운동은 <b>후보 확정공고(7/20) 다음날 ~ 선거일(8/22) 전일</b>에만 가능합니다.</li></ul></div></div><div class="subpane" id="rp-isa"><div class="rcard"><div class="rch">① 자격 요건</div><p>사업구역 내 부동산을 <b>5년 이상 소유</b>, 또는 <b>직전 3년 중 1년 이상 거주</b>한 조합원</p><div class="rmini">⚠️ 미성년자·피성년/한정후견인, 파산 후 미복권, 금고 이상 실형(집행 종료 후 2년 미경과)·집행유예 기간 중, 벌금 100만원 이상(10년 미경과), 면직 후 2년 미경과, 해당 사업 시공자·관련 업체 임직원 등은 후보가 될 수 없습니다.</div></div><div class="rcard"><div class="rch"><span>추천 10명 · 중복가능</span>② 제출 서류</div><ul class="checklist"><li><span class="dtag req">필수</span>후보자 등록 신청서 (규정 서식)</li><li><span class="dtag req">필수</span>추천서 (규정 서식)</li><li><span class="dtag req">필수</span>신분증 사본 (주민등록증·여권 등)</li><li><span class="dtag opt">선택</span>가족관계증명서 (배우자·직계존비속이 대신 제출할 때만)</li><li><span class="dtag req">필수</span>반명함판 사진 2매</li><li><span class="dtag req">필수</span>주민등록 등본·초본</li><li><span class="dtag req">필수</span>토지·건물 등기부등본 (소유 증명)</li><li><span class="dtag opt">선택</span>학력·경력 증명 — 졸업증명서·건강보험 자격득실확인서만 인정</li><li><span class="dtag req">필수</span>범죄·수사경력 조회 신청서</li><li><span class="dtag req">필수</span>공명선거 실천 서약서 (규정 서식)</li></ul><div class="rmini"><b>추천 요건</b> — 선거인 10명 이상 (중복 추천 가능) · 본인 추천 불가 · 학력·경력은 안 내도 등록(거짓 기재 시 무효)</div></div><div class="rcard"><div class="rch">③ 가능한 선거활동</div><div class="dodont"><div class="ddcard"><div class="ddh ok">✅ 할 수 있어요</div><ul><li>후보 본인 + 등록 선거운동원 1명(+가족)이 운동</li><li>전화·문자·SNS·단톡방으로 지지 호소</li><li>명함 배포 · 어깨띠 착용 거리 홍보</li><li>선거공보 제출 — 기호추첨 후 2일 내 (선택 · A4 1장(양면 가능))</li></ul></div><div class="ddcard"><div class="ddh no">🚫 하면 안 돼요</div><ul><li>후보끼리 연대 홍보·공동 운동</li><li>현수막·포스터 게시·부착</li><li>집집마다 방문(호별 방문)</li><li>전화는 후보 본인만 · 밤 10시~아침 7시 금지</li><li>거짓 사실·상대 비방, 금품·식사 제공</li><li>기간 전에 미리 운동(사전 선거운동)</li></ul></div></div></div><div class="rcard"><div class="rch">④ 유의사항</div><ul class="cautlist"><li>이 선거에서 <b>이사 6명</b>을 선출합니다.</li><li>후보 수가 정수(6명)와 같으면 <b>무투표 당선</b>으로 결정됩니다.</li><li>거짓 서류·매수·비방·사전운동 등은 <b>등록취소·당선무효</b> 사유입니다.</li><li>등록 시 낸 <b>공명선거 실천 서약</b>을 어기면 불이익을 받습니다.</li><li>선거운동은 <b>후보 확정공고(7/20) 다음날 ~ 선거일(8/22) 전일</b>에만 가능합니다.</li></ul></div></div><div class="subpane" id="rp-dae"><div class="rcard"><div class="rch">① 자격 요건</div><p>사업구역 내 부동산을 <b>1년 이상 소유</b>한 조합원</p><div class="rmini">⚠️ 미성년자·피성년/한정후견인, 파산 후 미복권, 금고 이상 실형(집행 종료 후 2년 미경과)·집행유예 기간 중, 벌금 100만원 이상(10년 미경과), 면직 후 2년 미경과, 해당 사업 시공자·관련 업체 임직원 등은 후보가 될 수 없습니다.</div></div><div class="rcard"><div class="rch"><span>추천 5명 · 중복가능</span>② 제출 서류</div><ul class="checklist"><li><span class="dtag req">필수</span>후보자 등록 신청서 (규정 서식)</li><li><span class="dtag req">필수</span>추천서 (규정 서식)</li><li><span class="dtag req">필수</span>신분증 사본 (주민등록증·여권 등)</li><li><span class="dtag opt">선택</span>가족관계증명서 (배우자·직계존비속이 대신 제출할 때만)</li><li><span class="dtag req">필수</span>반명함판 사진 2매</li><li><span class="dtag req">필수</span>주민등록 등본·초본</li><li><span class="dtag req">필수</span>토지·건물 등기부등본 (소유 증명)</li><li><span class="dtag opt">선택</span>학력·경력 증명 — 졸업증명서·건강보험 자격득실확인서만 인정</li><li><span class="dtag req">필수</span>범죄·수사경력 조회 신청서</li><li><span class="dtag req">필수</span>공명선거 실천 서약서 (규정 서식)</li></ul><div class="rmini"><b>추천 요건</b> — 선거인 5명 이상 (중복 추천 가능) · 본인 추천 불가 · 학력·경력은 안 내도 등록(거짓 기재 시 무효)</div></div><div class="rcard"><div class="rch">③ 가능한 선거활동</div><div class="dodont"><div class="ddcard"><div class="ddh ok">✅ 할 수 있어요</div><ul><li>후보 본인 + 등록 선거운동원 1명(+가족)이 운동</li><li>전화·문자·SNS·단톡방으로 지지 호소</li><li>명함 배포 · 어깨띠 착용 거리 홍보</li><li>선거공보 제출 — 기호추첨 후 2일 내 (선택 · A4 1장(단면))</li></ul></div><div class="ddcard"><div class="ddh no">🚫 하면 안 돼요</div><ul><li>후보끼리 연대 홍보·공동 운동</li><li>현수막·포스터 게시·부착</li><li>집집마다 방문(호별 방문)</li><li>전화는 후보 본인만 · 밤 10시~아침 7시 금지</li><li>거짓 사실·상대 비방, 금품·식사 제공</li><li>기간 전에 미리 운동(사전 선거운동)</li></ul></div></div></div><div class="rcard"><div class="rch">④ 유의사항</div><ul class="cautlist"><li>이 선거에서 <b>대의원 39명 (A동 14 · B동 14 · C동 11)</b>을 선출합니다.</li><li>대의원은 <b>동별로 인원이 배정</b>(A14·B14·C11)되고, 어느 동에 후보가 모자라면 그만큼은 동 구분 없이 <b>표 많은 순서</b>로 채웁니다.</li><li>중간에 그만두면 <b>같은 동</b>에서 먼저 다음 순번이 이어받습니다(보궐).</li><li>득표수가 같으면 <b>현장 추첨</b>으로 정합니다.</li><li>거짓 서류·매수·비방·사전운동 등은 <b>등록취소·당선무효</b> 사유입니다.</li><li>등록 시 낸 <b>공명선거 실천 서약</b>을 어기면 불이익을 받습니다.</li><li>선거운동은 <b>후보 확정공고(7/20) 다음날 ~ 선거일(8/22) 전일</b>에만 가능합니다.</li></ul></div></div><div class="report"><div class="t">❓ 궁금하거나 신고할 일이 있으면</div><a class="callbtn" href="tel:070-7543-1858">📞 070-7543-1858 · 선관위 문의</a><div class="c2">선관위 사무실 (코오롱포레스텔 306호)</div></div></div>
+
+  <footer>여의도 수정아파트 재건축정비구역 조합설립주민협의체 선거관리위원회 · 조합 창립총회 선거 안내<br>본 안내는 이해를 돕기 위한 요약이며, 세부 사항은 선거관리계획·규정을 따릅니다.</footer>
+</div>
+</body></html>
