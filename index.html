@@ -11,6 +11,10 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#0f172a">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -169,6 +173,11 @@ body{background:var(--bg);color:var(--text);line-height:1.55;font-size:15.5px;-w
 .ddcard li::before{content:'·';position:absolute;left:2px;color:var(--muted);font-weight:800}
 @media(max-width:560px){.dodont{grid-template-columns:1fr}}
 footer{text-align:center;color:var(--faint);font-size:12.5px;padding:8px 18px 0;line-height:1.7}
+
+/* in-app webview 안정화 */
+body{overflow-x:hidden}
+a,label{-webkit-tap-highlight-color:transparent}
+.tabnav label,.subnav label,.sfnav label,a.callbtn{touch-action:manipulation;-webkit-user-select:none;user-select:none}
 </style></head><body>
 
 <div class="hero">
