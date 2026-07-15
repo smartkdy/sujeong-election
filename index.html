@@ -194,6 +194,25 @@ a,label{-webkit-tap-highlight-color:transparent}
 .tabnav label,.subnav label,.sfnav label,a.callbtn{touch-action:manipulation;-webkit-user-select:none;user-select:none}
 .callbtn.mail{background:var(--navy,#0f2a52);box-shadow:0 2px 6px rgba(15,42,82,.2);margin-left:8px}
 @media(max-width:560px){.report .callbtn{display:block;margin-left:auto;margin-right:auto;width:max-content;max-width:100%}}
+.cand{margin-top:22px;border-top:1px dashed var(--line);padding-top:18px}
+.cand-head{display:flex;align-items:baseline;gap:10px;margin-bottom:3px;flex-wrap:wrap}
+.cand-head b{font-size:16.5px;font-weight:800;color:var(--ink)}
+.cand-head .cand-date{font-size:12.5px;color:var(--muted);font-weight:700}
+.cand-sub{font-size:13px;color:var(--muted);margin:0 0 15px}
+.cand-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.candcard{border:1px solid var(--line);border-left:4px solid var(--cc,#3b6dff);border-radius:11px;padding:13px 15px;background:#fbfcfe}
+.candcard.full{grid-column:1/-1}
+.cc-h{display:flex;align-items:center;gap:8px;margin-bottom:11px}
+.cc-h b{font-size:15px;font-weight:800;color:var(--ink)}
+.cc-h .dot{width:12px;height:12px}
+.cc-h .cc-sel{margin-left:auto;font-size:12px;font-weight:700;color:var(--muted)}
+.cc-list{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.pers{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 13px 4px 5px;font-size:14px;font-weight:700;color:var(--ink)}
+.pers i{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--cc,#3b6dff);color:#fff;font-size:12px;font-weight:800;font-style:normal;flex:0 0 auto}
+.pers.win{background:#ecfdf5;border-color:#a7f3d0}
+.wbadge{font-size:11.5px;font-weight:800;color:#047857;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:6px;padding:3px 8px}
+.cc-none{font-size:13.5px;color:var(--muted);font-weight:600;line-height:1.5}
+@media(max-width:560px){.cand-grid{grid-template-columns:1fr}}
 </style></head><body>
 
 <div class="hero">
@@ -215,6 +234,30 @@ a,label{-webkit-tap-highlight-color:transparent}
     <p class="hemi-cap">맨 앞 <b style="color:#ff2d8e">★조합장</b>, 그 뒤 <b style="color:#a855f7">감사·이사</b>(집행부), 바깥 호에 <b style="color:#0d9488">대의원 39명</b>이 펼쳐진 구성 · <b>역할(아래 칩·카드)을 누르면</b> 해당 의석만 강조됩니다</p>
     <div class="hemi-lg"><label class="lgchip" for="sf-all">전체 보기</label><label class="lgchip" for="sf-jang"><i style="background:#ff2d8e"></i>조합장★ 1</label><label class="lgchip" for="sf-gam"><i style="background:#a855f7"></i>감사 1</label><label class="lgchip" for="sf-isa"><i style="background:#3b6dff"></i>이사 6</label><label class="lgchip" for="sf-a"><i style="background:#0d9488"></i>대의원 A 14</label><label class="lgchip" for="sf-b"><i style="background:#10b981"></i>대의원 B 14</label><label class="lgchip" for="sf-c"><i style="background:#f59e0b"></i>대의원 C 11</label></div>
     <div class="roles"><label class="role lead" for="sf-jang"><div class="role-h"><svg class="dot" viewBox="0 0 16 16" style="vertical-align:middle"><circle cx="8" cy="8" r="8" fill="#ff2d8e"/><polygon points="8.00,3.40 9.14,6.44 12.37,6.58 9.84,8.60 10.70,11.72 8.00,9.93 5.30,11.72 6.16,8.60 3.63,6.58 6.86,6.44" fill="#fff"/></svg><b>조합장</b><span class="role-n">1<small>명</small></span></div><div class="dots"><svg class="dot" viewBox="0 0 16 16" style="vertical-align:middle"><circle cx="8" cy="8" r="8" fill="#ff2d8e"/><polygon points="8.00,3.40 9.14,6.44 12.37,6.58 9.84,8.60 10.70,11.72 8.00,9.93 5.30,11.72 6.16,8.60 3.63,6.58 6.86,6.44" fill="#fff"/></svg></div></label><label class="role" for="sf-gam"><div class="role-h"><span class="dot c-gam"></span><b>감사</b><span class="role-n">1<small>명</small></span></div><div class="dots"><span class="dot c-gam"></span></div></label><label class="role" for="sf-isa"><div class="role-h"><span class="dot c-isa"></span><b>이사</b><span class="role-n">6<small>명</small></span></div><div class="dots"><span class="dot c-isa"></span><span class="dot c-isa"></span><span class="dot c-isa"></span><span class="dot c-isa"></span><span class="dot c-isa"></span><span class="dot c-isa"></span></div></label><label class="role" for="sf-a"><div class="role-h"><span class="dot c-a"></span><b>대의원 · A동</b><span class="role-n">14<small>명</small></span></div><div class="dots"><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span></div></label><label class="role" for="sf-b"><div class="role-h"><span class="dot c-b"></span><b>대의원 · B동</b><span class="role-n">14<small>명</small></span></div><div class="dots"><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span></div></label><label class="role" for="sf-c"><div class="role-h"><span class="dot c-c"></span><b>대의원 · C동</b><span class="role-n">11<small>명</small></span></div><div class="dots"><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span></div></label></div>
+
+    <div class="cand">
+      <div class="cand-head"><b>✅ 확정 후보 (기호 배정 완료)</b><span class="cand-date">기호 추첨 완료 · &rsquo;26.7.15</span></div>
+      <p class="cand-sub">아래 기호는 7/15 추첨으로 정해진 순서입니다. 대의원은 선출 정수에 후보자가 미달해 기호를 부여하지 않습니다.</p>
+      <div class="cand-grid">
+        <div class="candcard" style="--cc:#ff2d8e">
+          <div class="cc-h"><span class="dot" style="background:#ff2d8e"></span><b>조합장</b><span class="cc-sel">1명 선출</span></div>
+          <div class="cc-list"><span class="pers"><i>1</i>권 훈</span><span class="pers"><i>2</i>어 준</span></div>
+        </div>
+        <div class="candcard" style="--cc:#a855f7">
+          <div class="cc-h"><span class="dot" style="background:#a855f7"></span><b>감사</b><span class="cc-sel">1명 선출</span></div>
+          <div class="cc-list"><span class="pers win"><i>1</i>배정한</span><span class="wbadge">단독 출마 · 무투표 당선</span></div>
+        </div>
+        <div class="candcard full" style="--cc:#3b6dff">
+          <div class="cc-h"><span class="dot" style="background:#3b6dff"></span><b>이사</b><span class="cc-sel">6명 선출 · 후보 9명</span></div>
+          <div class="cc-list"><span class="pers"><i>1</i>임윤택</span><span class="pers"><i>2</i>서용덕</span><span class="pers"><i>3</i>최성훈</span><span class="pers"><i>4</i>박윤우</span><span class="pers"><i>5</i>정현모</span><span class="pers"><i>6</i>정인영</span><span class="pers"><i>7</i>박정훈</span><span class="pers"><i>8</i>김인섭</span><span class="pers"><i>9</i>안영우</span></div>
+        </div>
+        <div class="candcard full" style="--cc:#0d9488">
+          <div class="cc-h"><span class="dot" style="background:#0d9488"></span><b>대의원</b><span class="cc-sel">39명 선출</span></div>
+          <div class="cc-none">선출 정수에 후보자가 <b>미달</b>하여 기호를 부여하지 않습니다. (등록 후보 전원 대상 · 동별 배정·보궐 규칙은 아래 2번 항목 참고)</div>
+        </div>
+      </div>
+      <div class="note warn">⚠️ <b>현재 후보 자격 심사가 진행 중입니다.</b> 심사 과정에서 <b>부정행위가 발견</b>되거나 <b>제출 서류가 요건을 충족하지 못하는 경우</b>, 해당 후보의 <b>등록은 취소될 수 있습니다.</b> 최종 후보·기호는 <b>후보 확정 발표(7/20)</b> 시점에 확정됩니다.</div>
+    </div>
   </div>
 
   <div class="sec">
