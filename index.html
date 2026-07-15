@@ -213,6 +213,31 @@ a,label{-webkit-tap-highlight-color:transparent}
 .wbadge{font-size:11.5px;font-weight:800;color:#047857;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:6px;padding:3px 8px}
 .cc-none{font-size:13.5px;color:var(--muted);font-weight:600;line-height:1.5}
 @media(max-width:560px){.cand-grid{grid-template-columns:1fr}}
+.pubcols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.pubcol{border:1px solid var(--line);border-radius:11px;padding:14px 15px;background:#fbfcfe}
+.pubcol.v{border-left:4px solid var(--accent)}
+.pubcol.f{border-left:4px solid #94a3b8}
+.pubcol .h{display:flex;align-items:center;gap:7px;font-weight:800;font-size:14px;color:var(--ink);margin-bottom:9px}
+.pubcol ul{margin:0;padding-left:17px}
+.pubcol li{font-size:13px;margin:5px 0;color:#374151;line-height:1.55}
+.zbadge{font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:5px;white-space:nowrap}
+.zb-v{background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe}
+.zb-f{background:#f1f5f9;color:#475569;border:1px solid #e2e8f0}
+.pubwf{border:2px dashed #94a3b8;border-radius:12px;overflow:hidden;background:#fff;max-width:520px;margin:14px auto 0}
+.pubwf-h{background:#f1f5f9;border-bottom:2px dashed #cbd5e1;padding:14px 16px;display:flex;gap:14px;align-items:center}
+.pubwf-photo{width:60px;height:76px;border:1.5px dashed #94a3b8;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:11px;flex:0 0 auto;background:#f8fafc}
+.pubwf-hh b{font-size:16px;color:var(--ink)}
+.pubwf-hh .meta{font-size:12px;color:var(--muted);margin-top:3px}
+.pubwf-zone{padding:13px 16px;border-bottom:1px dashed #e2e8f0}
+.pzt{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);font-weight:700;margin-bottom:9px}
+.pline{display:flex;gap:9px;align-items:baseline;margin:7px 0}
+.pline .k{flex:0 0 64px;color:var(--muted);font-weight:700;font-size:12px}
+.pline .v{flex:1;border-bottom:1px dashed #cbd5e1;font-size:13px;color:#334155;padding-bottom:2px}
+.pline .proof{flex:0 0 auto;font-size:11px;color:#1d4ed8;font-weight:700}
+.pfill{height:10px;background:#eef2f7;border-radius:3px;margin:6px 0}
+.pfill.m{width:70%}.pfill.l{width:92%}
+.pubwf-foot{font-size:11px;color:var(--muted);text-align:center;padding:9px 12px;background:#fafbfc}
+@media(max-width:560px){.pubcols{grid-template-columns:1fr}}
 </style></head><body>
 
 <div class="hero">
@@ -412,6 +437,57 @@ a,label{-webkit-tap-highlight-color:transparent}
       <div class="rch">Q8. 합동연설회는 열리나요?</div>
       <p><b>개최 여부는 현재 미정(검토 중)</b>입니다. 개최하게 될 경우 <b>조합장 후보를 대상</b>으로 ① <b>선관위가 주최·지원</b>(후보 개인 주최 불가) ② <b>참여는 희망하는 후보만</b> — 후보가 1명이어도 개최 ③ 후보가 <b>직접 비전을 설명·설득</b>하고, 가능한 환경이면 <b>실시간 토론·질의응답</b>까지 진행 ④ 녹화 영상은 <b>유튜브에 업로드</b>되어 실시간 참석이 어려운 조합원도 시청하실 수 있습니다.</p>
       <div class="rmini"><b>참고</b> — 발표 순서는 기호 순이며, 세부 진행 방식은 확정되는 대로 다시 안내드립니다.</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sh"><span class="no">4</span><h2>개인 공보물 작성 방법</h2></div>
+    <p class="sub">📢 선관위 공지 — 임원·대의원 후보자 대상</p>
+
+    <div class="rcard">
+      <div class="rch">공보물은 ‘검증란’과 ‘비검증란’으로 나눠 작성해 주세요</div>
+      <p>임원·대의원 후보자 여러분께 개인 공보물 작성 방법을 안내드립니다. 공보물은 아래와 같이 <b>검증란</b>과 <b>비검증란</b>으로 구분하여 작성해 주시기 바랍니다.</p>
+      <div class="pubcols">
+        <div class="pubcol v">
+          <div class="h"><span class="zbadge zb-v">검증란</span>증빙서류 제출 필수</div>
+          <ul>
+            <li>증빙서류로 <b>확인된 사항만</b> 기재하실 수 있어요.</li>
+            <li><b>학력</b> — 졸업증명서로 증명</li>
+            <li><b>경력(재직 사실)</b> — 건강보험 자격득실확인서로 증명</li>
+          </ul>
+        </div>
+        <div class="pubcol f">
+          <div class="h"><span class="zbadge zb-f">비검증란</span>자유 서술</div>
+          <ul>
+            <li>직장에서의 <b>직위·담당 업무·주요 활동 경력</b> 등을 자유롭게 서술하실 수 있어요.</li>
+            <li>다만 <b>허위 사실이 적발될 경우 당선 무효</b> 처리되오니 유의해 주세요.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note warn">⚠️ 비검증란도 <b>허위 사실이 적발되면 당선 무효</b> 사유입니다. 증빙이 없는 내용은 사실 그대로만 작성해 주세요.</div>
+    </div>
+
+    <div class="rcard">
+      <div class="rch">공보물 예시 (레이아웃 와이어프레임)</div>
+      <p class="rmini" style="margin-top:0">아래는 <b>배치 예시</b>입니다. 실제 서식·분량(예: A4 1장)은 직위별 등록 안내를 따라 주세요.</p>
+      <div class="pubwf">
+        <div class="pubwf-h">
+          <div class="pubwf-photo">사진</div>
+          <div class="pubwf-hh"><b>기호 ○번 · 홍길동</b><div class="meta">이사 후보 · 여의도 수정아파트 재건축조합</div></div>
+        </div>
+        <div class="pubwf-zone">
+          <div class="pzt"><span class="zbadge zb-v">검증란</span>증빙서류로 확인된 사항만</div>
+          <div class="pline"><span class="k">학력</span><span class="v">○○대학교 ○○학과 졸업</span><span class="proof">📎 졸업증명서</span></div>
+          <div class="pline"><span class="k">경력</span><span class="v">(주)○○ 재직 (2015~현재)</span><span class="proof">📎 자격득실확인서</span></div>
+        </div>
+        <div class="pubwf-zone">
+          <div class="pzt"><span class="zbadge zb-f">비검증란</span>자유 서술</div>
+          <div class="pline"><span class="k">직위·업무</span><span class="v">○○팀장 · 예산·회계 총괄</span></div>
+          <div class="pline"><span class="k">활동경력</span><span class="v">아파트 동대표 2회 역임 등</span></div>
+          <div class="pfill l"></div><div class="pfill m"></div>
+        </div>
+        <div class="pubwf-foot">※ 예시 레이아웃 — 검증란은 증빙 항목만, 비검증란은 자유 서술</div>
+      </div>
     </div>
 
     <div class="report">
