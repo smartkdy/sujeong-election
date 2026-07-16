@@ -200,7 +200,7 @@ a,label{-webkit-tap-highlight-color:transparent}
 .cand-head .cand-date{font-size:12.5px;color:var(--muted);font-weight:700}
 .cand-sub{font-size:13px;color:var(--muted);margin:0 0 15px}
 .cand-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.candcard{border:1px solid var(--line);border-left:4px solid var(--cc,#3b6dff);border-radius:11px;padding:13px 15px;background:#fbfcfe}
+.candcard{border:1px solid var(--line);border-left:4px solid var(--cc,#3b6dff);border-radius:0 12px 12px 0;padding:13px 15px;background:#fbfcfe}
 .candcard.full{grid-column:1/-1}
 .cc-h{display:flex;align-items:center;gap:8px;margin-bottom:11px}
 .cc-h b{font-size:15px;font-weight:800;color:var(--ink)}
@@ -214,30 +214,31 @@ a,label{-webkit-tap-highlight-color:transparent}
 .cc-none{font-size:13.5px;color:var(--muted);font-weight:600;line-height:1.5}
 @media(max-width:560px){.cand-grid{grid-template-columns:1fr}}
 .pubcols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
-.pubcol{border:1px solid var(--line);border-radius:11px;padding:14px 15px;background:#fbfcfe}
-.pubcol.v{border-left:4px solid var(--accent)}
-.pubcol.f{border-left:4px solid #94a3b8}
-.pubcol .h{display:flex;align-items:center;gap:7px;font-weight:800;font-size:14px;color:var(--ink);margin-bottom:9px}
-.pubcol ul{margin:0;padding-left:17px}
-.pubcol li{font-size:13px;margin:5px 0;color:#374151;line-height:1.55}
-.zbadge{font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:5px;white-space:nowrap}
-.zb-v{background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe}
-.zb-f{background:#f1f5f9;color:#475569;border:1px solid #e2e8f0}
-.pubwf{border:2px dashed #94a3b8;border-radius:12px;overflow:hidden;background:#fff;max-width:520px;margin:14px auto 0}
-.pubwf-h{background:#f1f5f9;border-bottom:2px dashed #cbd5e1;padding:14px 16px;display:flex;gap:14px;align-items:center}
-.pubwf-photo{width:60px;height:76px;border:1.5px dashed #94a3b8;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:11px;flex:0 0 auto;background:#f8fafc}
+.pubcol{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:15px 17px;background:#fafbff}
+.pubcol.f{border-left-color:#94a3b8;background:#fafbfc}
+.pubcol .h{display:flex;align-items:center;gap:8px;font-weight:800;font-size:14.5px;color:var(--ink);margin-bottom:11px;flex-wrap:wrap}
+.pubcol ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:7px}
+.pubcol li{font-size:13.5px;color:var(--text);line-height:1.55;padding-left:14px;position:relative}
+.pubcol li::before{content:'·';position:absolute;left:3px;color:var(--muted);font-weight:800}
+.pubcol li b{color:var(--ink)}
+@media(max-width:560px){.pubcols{grid-template-columns:1fr}}
+.pubwf{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);max-width:520px;margin:14px auto 0;box-shadow:0 1px 0 rgba(15,23,42,0.02)}
+.pubwf-h{background:#fafbfc;border-bottom:1px solid var(--line);padding:14px 16px;display:flex;gap:14px;align-items:center}
+.pubwf-photo{width:58px;height:74px;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:11px;flex:0 0 auto;background:#fff}
 .pubwf-hh b{font-size:16px;color:var(--ink)}
 .pubwf-hh .meta{font-size:12px;color:var(--muted);margin-top:3px}
-.pubwf-zone{padding:13px 16px;border-bottom:1px dashed #e2e8f0}
+.pubwf-zone{padding:14px 16px;border-bottom:1px solid var(--line)}
 .pzt{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);font-weight:700;margin-bottom:9px}
 .pline{display:flex;gap:9px;align-items:baseline;margin:7px 0}
 .pline .k{flex:0 0 64px;color:var(--muted);font-weight:700;font-size:12px}
-.pline .v{flex:1;border-bottom:1px dashed #cbd5e1;font-size:13px;color:#334155;padding-bottom:2px}
-.pline .proof{flex:0 0 auto;font-size:11px;color:#1d4ed8;font-weight:700}
-.pfill{height:10px;background:#eef2f7;border-radius:3px;margin:6px 0}
+.pline .v{flex:1;border-bottom:1px solid #f1f5f9;font-size:13px;color:#334155;padding-bottom:3px}
+.pline .proof{flex:0 0 auto;font-size:11px;color:var(--accent);font-weight:700;background:var(--accent-soft);padding:2px 8px;border-radius:999px}
+.pfill{height:10px;background:#f1f5f9;border-radius:3px;margin:6px 0}
 .pfill.m{width:70%}.pfill.l{width:92%}
 .pubwf-foot{font-size:11px;color:var(--muted);text-align:center;padding:9px 12px;background:#fafbfc}
-@media(max-width:560px){.pubcols{grid-template-columns:1fr}}
+.zbadge{font-size:11px;font-weight:800;padding:3px 9px;border-radius:6px;white-space:nowrap;letter-spacing:.02em}
+.zb-v{background:var(--accent-soft);color:var(--accent)}
+.zb-f{background:#f1f5f9;color:var(--muted)}
 </style></head><body>
 
 <div class="hero">
@@ -449,7 +450,7 @@ a,label{-webkit-tap-highlight-color:transparent}
       <p>임원·대의원 후보자 여러분께 개인 공보물 작성 방법을 안내드립니다. 공보물은 아래와 같이 <b>검증란</b>과 <b>비검증란</b>으로 구분하여 작성해 주시기 바랍니다.</p>
       <div class="pubcols">
         <div class="pubcol v">
-          <div class="h"><span class="zbadge zb-v">검증란</span>증빙서류 제출 필수</div>
+          <div class="h">🔎 검증란 <span class="zbadge zb-v">증빙서류 제출 필수</span></div>
           <ul>
             <li>증빙서류로 <b>확인된 사항만</b> 기재하실 수 있어요.</li>
             <li><b>학력</b> — 졸업증명서로 증명</li>
@@ -457,7 +458,7 @@ a,label{-webkit-tap-highlight-color:transparent}
           </ul>
         </div>
         <div class="pubcol f">
-          <div class="h"><span class="zbadge zb-f">비검증란</span>자유 서술</div>
+          <div class="h">✍️ 비검증란 <span class="zbadge zb-f">자유 서술</span></div>
           <ul>
             <li>직장에서의 <b>직위·담당 업무·주요 활동 경력</b> 등을 자유롭게 서술하실 수 있어요.</li>
             <li>다만 <b>허위 사실이 적발될 경우 당선 무효</b> 처리되오니 유의해 주세요.</li>
