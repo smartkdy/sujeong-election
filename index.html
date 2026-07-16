@@ -239,7 +239,34 @@ a,label{-webkit-tap-highlight-color:transparent}
 .zbadge{font-size:11px;font-weight:800;padding:3px 9px;border-radius:6px;white-space:nowrap;letter-spacing:.02em}
 .zb-v{background:var(--accent-soft);color:var(--accent)}
 .zb-f{background:#f1f5f9;color:var(--muted)}
+.notice-toggle{position:absolute;width:0;height:0;opacity:0;pointer-events:none}
+.notice-overlay{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(15,23,42,.55)}
+.notice-toggle:checked~.notice-overlay{display:none}
+.notice-backdrop{position:absolute;inset:0;cursor:pointer}
+.notice-modal{position:relative;z-index:1;background:#fff;border-radius:16px;max-width:420px;width:100%;padding:26px 24px 20px;box-shadow:0 20px 50px rgba(15,23,42,.35);animation:noticePop .25s ease}
+@keyframes noticePop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+.notice-badge{display:inline-block;font-size:12px;font-weight:800;color:var(--accent);background:var(--accent-soft);padding:4px 11px;border-radius:999px;margin-bottom:12px}
+.notice-modal h3{font-size:18px;font-weight:800;color:var(--ink);margin:0 0 10px;letter-spacing:-.01em;line-height:1.35}
+.notice-modal p{font-size:14px;line-height:1.65;color:var(--text);margin:0 0 10px}
+.notice-modal .em{color:var(--ink)}
+.notice-hl{background:#eff4ff;border-left:3px solid var(--accent);border-radius:0 9px 9px 0;padding:11px 14px;font-size:13.5px;color:#1e3a5f;line-height:1.6;margin:12px 0 4px}
+.notice-hl b{color:var(--navy)}
+.notice-close-btn{display:block;width:100%;text-align:center;margin-top:18px;padding:13px;background:var(--accent);color:#fff;font-weight:700;font-size:15px;border-radius:999px;cursor:pointer;user-select:none;-webkit-user-select:none}
+.notice-close-btn:hover{filter:brightness(.96)}
 </style></head><body>
+
+<input type="checkbox" id="noticeClose" class="notice-toggle" aria-hidden="true" autocomplete="off">
+<div class="notice-overlay" role="dialog" aria-modal="true" aria-labelledby="noticeTitle">
+  <label for="noticeClose" class="notice-backdrop" aria-label="공지 닫기"></label>
+  <div class="notice-modal">
+    <span class="notice-badge">📢 선관위 안내</span>
+    <h3 id="noticeTitle">경합 없는 후보도 ‘가·부 투표’로 당선 결정</h3>
+    <p>도시 및 주거환경정비법에 따라, 후보가 정수 이하로 <b class="em">경합이 없더라도 ‘무투표 당선’이 아니라</b> 아래 절차로 당선이 결정됩니다.</p>
+    <div class="notice-hl">✅ <b>총회 과반수 출석(성립)</b> + <b>총회 가·부(찬반) 투표</b>로 당선 확정</div>
+    <p>현재 이와 관련하여 <b class="em">선관위에서 의결을 준비 중</b>이며, 확정되는 대로 다시 안내드리겠습니다.</p>
+    <label for="noticeClose" class="notice-close-btn">닫기</label>
+  </div>
+</div>
 
 <div class="hero">
   <span class="tag">선거관리위원회 · 선거 안내</span>
@@ -569,4 +596,5 @@ a,label{-webkit-tap-highlight-color:transparent}
 
   <footer>여의도 수정아파트 재건축정비구역 조합설립주민협의체 선거관리위원회 · 조합 창립총회 선거 안내<br>본 안내는 이해를 돕기 위한 요약이며, 세부 사항은 선거관리계획·규정을 따릅니다.</footer>
 </div>
+<script>(function(){function r(){var c=document.getElementById('noticeClose');if(c)c.checked=false;}window.addEventListener('pageshow',r);r();})();</script>
 </body></html>
