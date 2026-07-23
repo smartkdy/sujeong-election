@@ -44,6 +44,7 @@ body{background:var(--bg);color:var(--text);line-height:1.55;font-size:15.5px;-w
 .seat{transition:opacity .15s ease}
 .sf{position:absolute;width:0;height:0;opacity:0;pointer-events:none}
 #sf-jang:checked~.seatwrap .seat:not(.s-jang),#sf-gam:checked~.seatwrap .seat:not(.s-gam),#sf-isa:checked~.seatwrap .seat:not(.s-isa),#sf-a:checked~.seatwrap .seat:not(.s-a),#sf-b:checked~.seatwrap .seat:not(.s-b),#sf-c:checked~.seatwrap .seat:not(.s-c){opacity:.12}
+#sf-dae:checked~.seatwrap .seat.s-jang,#sf-dae:checked~.seatwrap .seat.s-gam,#sf-dae:checked~.seatwrap .seat.s-isa{opacity:.12}
 #sf-all:checked~.hemi-lg label[for=sf-all],#sf-all:checked~.roles label[for=sf-all]{outline:1.5px solid var(--accent);outline-offset:-1.5px;background:var(--accent-soft)}#sf-jang:checked~.hemi-lg label[for=sf-jang],#sf-jang:checked~.roles label[for=sf-jang]{outline:1.5px solid var(--accent);outline-offset:-1.5px;background:var(--accent-soft)}#sf-gam:checked~.hemi-lg label[for=sf-gam],#sf-gam:checked~.roles label[for=sf-gam]{outline:1.5px solid var(--accent);outline-offset:-1.5px;background:var(--accent-soft)}#sf-isa:checked~.hemi-lg label[for=sf-isa],#sf-isa:checked~.roles label[for=sf-isa]{outline:1.5px solid var(--accent);outline-offset:-1.5px;background:var(--accent-soft)}#sf-a:checked~.hemi-lg label[for=sf-a],#sf-a:checked~.roles label[for=sf-a]{outline:1.5px solid var(--accent);outline-offset:-1.5px;background:var(--accent-soft)}#sf-b:checked~.hemi-lg label[for=sf-b],#sf-b:checked~.roles label[for=sf-b]{outline:1.5px solid var(--accent);outline-offset:-1.5px;background:var(--accent-soft)}#sf-c:checked~.hemi-lg label[for=sf-c],#sf-c:checked~.roles label[for=sf-c]{outline:1.5px solid var(--accent);outline-offset:-1.5px;background:var(--accent-soft)}
 .hemi-lg{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:2px auto 20px;font-size:13px}
 .lgchip{cursor:pointer;display:inline-flex;align-items:center;padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);user-select:none}
@@ -203,6 +204,8 @@ a,label{-webkit-tap-highlight-color:transparent}
 .cand-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .candcard{border:1px solid var(--line);border-radius:14px;padding:13px 15px;background:#fbfcfe}
 .candcard.full{grid-column:1/-1}
+label.candcard{cursor:pointer}
+#sf-jang:checked~.cand label[for=sf-jang],#sf-gam:checked~.cand label[for=sf-gam],#sf-isa:checked~.cand label[for=sf-isa],#sf-dae:checked~.cand label[for=sf-dae]{outline:1.5px solid var(--accent);outline-offset:-1.5px}
 .cc-h{display:flex;align-items:center;gap:8px;margin-bottom:11px}
 .cc-h b{font-size:15px;font-weight:800;color:var(--ink)}
 .cc-h .dot{width:12px;height:12px}
@@ -283,31 +286,31 @@ a,label{-webkit-tap-highlight-color:transparent}
     <div class="sh"><span class="no">1</span><h2>무엇을 뽑나요</h2></div>
     <p class="sub">이번 선거에서 선출하는 임원·대의원입니다</p>
     <div class="total"><div class="n"><span id="countTotal" data-target="47">47</span><span style="font-size:24.5px"> 명</span></div><div class="t">총 선출 인원 (임원 8 + 대의원 39)</div></div>
-    <input class="sf" type="radio" name="sfocus" id="sf-all" checked><input class="sf" type="radio" name="sfocus" id="sf-jang"><input class="sf" type="radio" name="sfocus" id="sf-gam"><input class="sf" type="radio" name="sfocus" id="sf-isa"><input class="sf" type="radio" name="sfocus" id="sf-a"><input class="sf" type="radio" name="sfocus" id="sf-b"><input class="sf" type="radio" name="sfocus" id="sf-c">
+    <input class="sf" type="radio" name="sfocus" id="sf-all" checked><input class="sf" type="radio" name="sfocus" id="sf-jang"><input class="sf" type="radio" name="sfocus" id="sf-gam"><input class="sf" type="radio" name="sfocus" id="sf-isa"><input class="sf" type="radio" name="sfocus" id="sf-a"><input class="sf" type="radio" name="sfocus" id="sf-b"><input class="sf" type="radio" name="sfocus" id="sf-c"><input class="sf" type="radio" name="sfocus" id="sf-dae">
     <div class="seatwrap"><svg viewBox="0 0 260 141" style="width:100%;max-width:440px;height:auto;display:block;margin:8px auto 2px"><circle class="seat s-jang" cx="130" cy="127" r="7" fill="#ff2d8e"/><polygon class="seat s-jang" points="130.00,122.60 131.09,125.50 134.18,125.64 131.76,127.57 132.59,130.56 130.00,128.85 127.41,130.56 128.24,127.57 125.82,125.64 128.91,125.50" fill="#fff"/><circle class="seat s-gam" cx="169.0" cy="117.1" r="7" fill="#a855f7"/><circle class="seat s-isa" cx="161.3" cy="101.1" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="147.4" cy="90.0" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="130.0" cy="86.0" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="112.6" cy="90.0" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="98.7" cy="101.1" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="91.0" cy="117.1" r="7" fill="#3b6dff"/><circle class="seat s-a" cx="191.2" cy="116.3" r="7" fill="#0d9488"/><circle class="seat s-a" cx="185.2" cy="97.9" r="7" fill="#0d9488"/><circle class="seat s-a" cx="173.8" cy="82.2" r="7" fill="#0d9488"/><circle class="seat s-a" cx="158.1" cy="70.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="139.7" cy="64.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="120.3" cy="64.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="101.9" cy="70.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="86.2" cy="82.2" r="7" fill="#0d9488"/><circle class="seat s-a" cx="74.8" cy="97.9" r="7" fill="#0d9488"/><circle class="seat s-a" cx="68.8" cy="116.3" r="7" fill="#0d9488"/><circle class="seat s-a" cx="213.4" cy="115.9" r="7" fill="#0d9488"/><circle class="seat s-a" cx="208.5" cy="96.2" r="7" fill="#0d9488"/><circle class="seat s-a" cx="199.1" cy="78.3" r="7" fill="#0d9488"/><circle class="seat s-a" cx="185.7" cy="63.1" r="7" fill="#0d9488"/><circle class="seat s-b" cx="169.0" cy="51.6" r="7" fill="var(--success)"/><circle class="seat s-b" cx="150.1" cy="44.4" r="7" fill="var(--success)"/><circle class="seat s-b" cx="130.0" cy="42.0" r="7" fill="var(--success)"/><circle class="seat s-b" cx="109.9" cy="44.4" r="7" fill="var(--success)"/><circle class="seat s-b" cx="91.0" cy="51.6" r="7" fill="var(--success)"/><circle class="seat s-b" cx="74.3" cy="63.1" r="7" fill="var(--success)"/><circle class="seat s-b" cx="60.9" cy="78.3" r="7" fill="var(--success)"/><circle class="seat s-b" cx="51.5" cy="96.2" r="7" fill="var(--success)"/><circle class="seat s-b" cx="46.6" cy="115.9" r="7" fill="var(--success)"/><circle class="seat s-b" cx="235.5" cy="115.6" r="7" fill="var(--success)"/><circle class="seat s-b" cx="231.4" cy="95.2" r="7" fill="var(--success)"/><circle class="seat s-b" cx="223.5" cy="76.0" r="7" fill="var(--success)"/><circle class="seat s-b" cx="211.9" cy="58.8" r="7" fill="var(--success)"/><circle class="seat s-b" cx="197.2" cy="44.1" r="7" fill="var(--success)"/><circle class="seat s-c" cx="180.0" cy="32.5" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="160.8" cy="24.6" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="140.4" cy="20.5" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="119.6" cy="20.5" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="99.2" cy="24.6" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="80.0" cy="32.5" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="62.8" cy="44.1" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="48.1" cy="58.8" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="36.5" cy="76.0" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="28.6" cy="95.2" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="24.5" cy="115.6" r="7" fill="var(--warning)"/></svg></div>
     <p class="hemi-cap">맨 앞 <b style="color:#ff2d8e">★조합장</b>, 그 뒤 <b style="color:#a855f7">감사·이사</b>(집행부), 바깥 호에 <b style="color:#0d9488">대의원 39명</b>이 펼쳐진 구성 · <b>역할(아래 칩)을 누르면</b> 해당 의석만 강조됩니다</p>
     <div class="hemi-lg"><label class="lgchip" for="sf-all">전체 보기</label><label class="lgchip" for="sf-jang"><i style="background:#ff2d8e"></i>조합장★ 1</label><label class="lgchip" for="sf-gam"><i style="background:#a855f7"></i>감사 1</label><label class="lgchip" for="sf-isa"><i style="background:#3b6dff"></i>이사 6</label><label class="lgchip" for="sf-a"><i style="background:#0d9488"></i>대의원 A 14</label><label class="lgchip" for="sf-b"><i style="background:var(--success)"></i>대의원 B 14</label><label class="lgchip" for="sf-c"><i style="background:var(--warning)"></i>대의원 C 11</label></div>
 
     <div class="cand">
-      <div class="cand-head"><b>✅ 확정 후보 (기호 배정 완료)</b><span class="cand-date">기호 추첨 완료 · &rsquo;26.7.15</span></div>
+      <div class="cand-head"><b>확정 후보</b><span class="cand-date">기호 추첨 완료 · &rsquo;26.7.15</span></div>
       <p class="cand-sub">아래 기호는 7/15 추첨으로 정해진 순서입니다. 대의원은 기호 없이 <b>가·부(찬반) 투표</b>로 선출합니다.</p>
       <div class="cand-grid">
-        <div class="candcard" style="--cc:#ff2d8e">
+        <label class="candcard" for="sf-jang" style="--cc:#ff2d8e">
           <div class="cc-h"><span class="dot" style="background:#ff2d8e"></span><b>조합장</b><span class="cc-sel">1명 선출</span></div>
           <div class="cc-list"><span class="pers"><i>1</i>권 훈</span><span class="pers"><i>2</i>어 준</span></div>
-        </div>
-        <div class="candcard" style="--cc:#a855f7">
+        </label>
+        <label class="candcard" for="sf-gam" style="--cc:#a855f7">
           <div class="cc-h"><span class="dot" style="background:#a855f7"></span><b>감사</b><span class="cc-sel">1명 선출</span></div>
           <div class="cc-list"><span class="pers win"><i>1</i>배정한</span><span class="wbadge">단독 출마 · 가·부 투표</span></div>
-        </div>
-        <div class="candcard full" style="--cc:#3b6dff">
+        </label>
+        <label class="candcard full" for="sf-isa" style="--cc:#3b6dff">
           <div class="cc-h"><span class="dot" style="background:#3b6dff"></span><b>이사</b><span class="cc-sel">6명 선출 · 후보 9명</span></div>
           <div class="cc-list"><span class="pers"><i>1</i>임윤택</span><span class="pers"><i>2</i>서용덕</span><span class="pers"><i>3</i>최성훈</span><span class="pers"><i>4</i>박윤우</span><span class="pers"><i>5</i>정현모</span><span class="pers"><i>6</i>정인영</span><span class="pers"><i>7</i>박정훈</span><span class="pers"><i>8</i>김인섭</span><span class="pers"><i>9</i>안영우</span></div>
-        </div>
-        <div class="candcard full" style="--cc:#0d9488">
+        </label>
+        <label class="candcard full" for="sf-dae" style="--cc:#0d9488">
           <div class="cc-h"><span class="dot" style="background:#0d9488"></span><b>대의원</b><span class="cc-sel">39명 선출 · 후보 39명</span></div>
           <div class="cc-none"><b>A동 18명 · B동 13명 · C동 8명</b>이 지원해 <b>총 39명</b>이 등록했습니다. 대의원은 기호 없이 <b>가·부(찬반) 투표</b>로 선출합니다. (동별 배정·보궐 규칙은 아래 2번 항목 참고)</div>
-        </div>
+        </label>
       </div>
     </div>
   </div>
