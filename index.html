@@ -20,12 +20,13 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 :root{--bg:#f5f6f8;--card:#fff;--ink:#0f172a;--text:#1f2937;--muted:#6b7280;--faint:#9ca3af;--line:#e5e7eb;
- --accent:#3b6dff;--accent-soft:#eef2ff;--navy:#0f2a52;}
+ --accent:#3b6dff;--accent-soft:#eef2ff;--navy:#0f2a52;
+ --success:#10b981;--warning:#f59e0b;--danger:#ef4444;--info:#0ea5e9;}
 body{background:var(--bg);color:var(--text);line-height:1.55;font-size:15.5px;-webkit-font-smoothing:antialiased;
  font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo",Roboto,sans-serif;
  font-feature-settings:"ss01","tnum"}
 .hero{background:linear-gradient(135deg,#0f172a 0%,#1e293b 60%,#312e81 100%);color:#fff;padding:38px 22px 34px;text-align:center;border-bottom:1px solid var(--line)}
-.hero .tag{display:inline-block;background:#ef4444;color:#fff;font-size:12.5px;font-weight:800;letter-spacing:.05em;padding:3px 10px;border-radius:5px;margin-bottom:12px}
+.hero .tag{display:inline-block;background:var(--danger);color:#fff;font-size:12.5px;font-weight:800;letter-spacing:.05em;padding:3px 10px;border-radius:6px;margin-bottom:12px}
 .hero h1{font-size:24.5px;font-weight:800;letter-spacing:-.01em;line-height:1.35}
 .hero p{margin-top:10px;color:#cbd5e1;font-size:14.5px}
 .wrap{max-width:860px;margin:0 auto;padding:26px 18px 70px}
@@ -49,13 +50,13 @@ body{background:var(--bg);color:var(--text);line-height:1.55;font-size:15.5px;-w
 .lgchip i{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:6px;vertical-align:middle}
 .dot{width:15px;height:15px;border-radius:50%;display:inline-block;flex:0 0 auto}
 .c-jang{background:#ff2d8e}.c-gam{background:#a855f7}.c-isa{background:#3b6dff}
-.c-a{background:#0d9488}.c-b{background:#10b981}.c-c{background:#f59e0b}
+.c-a{background:#0d9488}.c-b{background:var(--success)}.c-c{background:var(--warning)}
 .dot.star-in{display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:10.5px;line-height:1}
 .role .dot.star-in{font-size:9.5px}
 .role.lead{border-color:#ffb3d6;background:#fff5fa}
 .roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 @media(max-width:560px){.roles{grid-template-columns:1fr}}
-.role{display:block;cursor:pointer;border:1px solid var(--line);border-radius:11px;padding:13px 14px;background:#fbfcfe}
+.role{display:block;cursor:pointer;border:1px solid var(--line);border-radius:14px;padding:13px 14px;background:#fbfcfe}
 .role-h{display:flex;align-items:center;gap:8px;margin-bottom:9px}
 .role-h b{font-size:15px;color:var(--ink);font-weight:700}
 .role-h .role-n{margin-left:auto;font-size:22.5px;font-weight:800;color:var(--ink)}
@@ -69,7 +70,7 @@ body{background:var(--bg);color:var(--text);line-height:1.55;font-size:15.5px;-w
 .alloc .lg i{width:11px;height:11px;border-radius:3px;display:inline-block;margin-right:5px;vertical-align:middle}
 .note{background:#eff4ff;border-left:3px solid #3b6dff;border-radius:0 9px 9px 0;padding:11px 14px;font-size:13.5px;color:#1e3a5f;margin-top:14px;line-height:1.6}
 .note b{color:var(--navy)}
-.note.ok{background:#ecfdf5;border-left-color:#10b981;color:#065f46}
+.note.ok{background:#ecfdf5;border-left-color:var(--success);color:#065f46}
 .note.ok b{color:#047857}
 .reqgate{background:var(--navy);color:#fff;border-radius:14px;padding:18px 20px;margin:2px 0 12px;text-align:center}
 .reqgate .rg-lab{font-size:13px;font-weight:700;color:#fcd34d;letter-spacing:.02em;margin-bottom:7px}
@@ -79,14 +80,14 @@ body{background:var(--bg);color:var(--text);line-height:1.55;font-size:15.5px;-w
 .reqlead{text-align:center;font-size:13.5px;color:var(--muted);margin:0 0 10px}
 .reqs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:4px}
 @media(max-width:560px){.reqs{grid-template-columns:1fr}}
-.req{border:1px solid var(--line);border-radius:12px;padding:15px 14px;background:#fbfcfe;text-align:center}
+.req{border:1px solid var(--line);border-radius:14px;padding:15px 14px;background:#fbfcfe;text-align:center}
 .req .ic{font-size:26.5px;line-height:1}
 .req b{display:block;font-size:15px;color:var(--ink);margin:8px 0 5px}
 .req p{font-size:13px;color:var(--muted);line-height:1.55}
 .req.hl{border-color:#fcd34d;background:#fffdf3}
 .req.hl b{color:#b45309}
 /* 간트 */
-.gantt{border:1px solid var(--line);border-radius:11px;background:#fff;overflow-x:auto;margin-top:4px}
+.gantt{border:1px solid var(--line);border-radius:14px;background:#fff;overflow-x:auto;margin-top:4px}
 .gantt-in{min-width:640px;padding:16px 18px 12px}
 .gaxis{position:relative;height:16px;margin-left:172px;margin-bottom:4px}
 .gaxis span{position:absolute;top:0;transform:translateX(-50%);font-size:11px;color:var(--muted);white-space:nowrap}
@@ -97,29 +98,29 @@ body{background:var(--bg);color:var(--text);line-height:1.55;font-size:15.5px;-w
 .gl small{font-size:11px;color:var(--muted)}
 .gplot{position:relative;flex:1;height:340px}
 .gline{position:absolute;top:0;bottom:0;width:1px;background:var(--line)}
-.gvline{position:absolute;top:0;bottom:0;border-left:1.5px dashed #ef4444;opacity:.7}
-.gbar{position:absolute;height:16px;border-radius:5px}
+.gvline{position:absolute;top:0;bottom:0;border-left:1.5px dashed var(--danger);opacity:.7}
+.gbar{position:absolute;height:16px;border-radius:6px}
 .gdot{position:absolute;transform:translate(-50%,0);font-size:13.5px;line-height:1}
 .glegend{display:flex;flex-wrap:wrap;gap:13px;margin-top:13px;margin-left:172px;font-size:11.5px;color:var(--muted)}
-.glegend .ln{display:inline-block;width:14px;border-top:1.5px dashed #ef4444;margin-right:5px;vertical-align:middle}
+.glegend .ln{display:inline-block;width:14px;border-top:1.5px dashed var(--danger);margin-right:5px;vertical-align:middle}
 .vote{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 @media(max-width:560px){.vote{grid-template-columns:1fr}}
-.vcard{border:1px solid var(--line);border-radius:11px;padding:14px;text-align:center;background:#fbfcfe}
+.vcard{border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;background:#fbfcfe}
 .vcard .ic{font-size:24.5px}.vcard b{display:block;font-size:15px;color:var(--ink);margin:6px 0 3px}
 .vcard p{font-size:13px;color:var(--muted);line-height:1.5}
-.case-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:11px}
+.case-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
 .case-tbl{width:100%;border-collapse:collapse;font-size:12.5px;min-width:680px;table-layout:fixed}
 .case-tbl th,.case-tbl td{padding:7px 9px;text-align:left;border-bottom:1px solid #f1f5f9;vertical-align:top;line-height:1.45;word-break:break-word}
 .case-tbl th{font-size:12px;font-weight:700;color:var(--muted);background:#fafbfc;white-space:nowrap}
 .case-tbl td.n{text-align:center;color:var(--faint);font-weight:700}
 .case-tbl .ty{font-weight:700;color:var(--ink);display:block;margin-top:3px}
 .case-tbl tr:last-child td{border-bottom:none}
-.cat{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 6px;border-radius:5px;white-space:nowrap}
+.cat{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 6px;border-radius:6px;white-space:nowrap}
 .cat-1{background:#eff6ff;color:#1d4ed8}.cat-2{background:#fef2f2;color:#b91c1c}.cat-3{background:#fffbeb;color:#b45309}.cat-4{background:#ecfdf5;color:#047857}
 .sanc{font-size:11.5px;font-weight:600;color:#b91c1c}.sanc small{color:var(--faint);font-weight:400;display:block;font-size:10.5px}
 .src{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;background:#f1f5f9;padding:1px 5px;border-radius:4px;color:#475569;word-break:keep-all}
 .mcnote{font-size:12px;color:var(--muted);line-height:1.55;margin-top:10px}
-.report{background:#fef2f2;border:1.5px solid #fca5a5;border-radius:12px;padding:15px 17px;margin-top:14px;text-align:center}
+.report{background:#fef2f2;border:1.5px solid #fca5a5;border-radius:14px;padding:15px 17px;margin-top:14px;text-align:center}
 .report .t{font-size:15.5px;font-weight:800;color:#b91c1c;line-height:1.5}
 .callbtn{display:inline-block;margin-top:11px;background:#dc2626;color:#fff;font-weight:800;font-size:16px;padding:11px 22px;border-radius:999px;text-decoration:none;box-shadow:0 2px 6px rgba(220,38,38,.25)}
 .callbtn:active{background:#b91c1c}
@@ -140,7 +141,7 @@ body{background:var(--bg);color:var(--text);line-height:1.55;font-size:15.5px;-w
 .subnav label:hover{border-color:var(--accent);color:var(--accent)}
 .subpane{display:none}
 #rt-gjang:checked~.subnav label[for=rt-gjang]{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}#rt-gam:checked~.subnav label[for=rt-gam]{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}#rt-isa:checked~.subnav label[for=rt-isa]{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}#rt-dae:checked~.subnav label[for=rt-dae]{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}#rt-gjang:checked~#rp-gjang,#rt-gam:checked~#rp-gam,#rt-isa:checked~#rp-isa,#rt-dae:checked~#rp-dae{display:block}
-.rcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:12px}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 17px;margin-bottom:12px}
 .rch{font-size:15.5px;font-weight:800;color:var(--ink);margin-bottom:10px;overflow:hidden}
 .rch span{float:right;font-size:12px;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:3px 11px;border-radius:999px;margin-top:1px;white-space:nowrap}
 .rcard>p{font-size:14.5px;color:var(--text);line-height:1.6;margin:0}
@@ -166,7 +167,7 @@ body{background:var(--bg);color:var(--text);line-height:1.55;font-size:15.5px;-w
 .cautlist li{font-size:13.5px;color:var(--text);line-height:1.5;padding-left:15px;position:relative}
 .cautlist li::before{content:'•';position:absolute;left:2px;color:var(--accent);font-weight:800}
 .cautlist li b{color:var(--ink)}
-.note.warn{background:#fffbeb;border-left-color:#f59e0b;color:#92400e}
+.note.warn{background:#fffbeb;border-left-color:var(--warning);color:#92400e}
 .note.warn b{color:#b45309}
 .kv{font-size:14.5px;color:var(--text);padding:8px 0;border-bottom:1px solid #f1f5f9}
 .kv b{display:inline-block;min-width:96px;color:var(--muted);font-weight:700;font-size:13px;margin-right:6px}
@@ -179,7 +180,7 @@ body{background:var(--bg);color:var(--text);line-height:1.55;font-size:15.5px;-w
 .dtag.req{background:var(--accent-soft);color:var(--accent)}
 .dtag.opt{background:#f1f5f9;color:var(--muted)}
 .dodont{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.ddcard{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.ddcard{border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .ddh{font-weight:800;font-size:14.5px;padding:10px 14px;color:#fff}
 .ddh.ok{background:#059669}.ddh.no{background:#dc2626}
 .ddcard ul{list-style:none;padding:11px 14px;display:flex;flex-direction:column;gap:7px}
@@ -200,7 +201,7 @@ a,label{-webkit-tap-highlight-color:transparent}
 .cand-head .cand-date{font-size:12.5px;color:var(--muted);font-weight:700}
 .cand-sub{font-size:13px;color:var(--muted);margin:0 0 15px}
 .cand-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.candcard{border:1px solid var(--line);border-left:4px solid var(--cc,#3b6dff);border-radius:0 12px 12px 0;padding:13px 15px;background:#fbfcfe}
+.candcard{border:1px solid var(--line);border-radius:14px;padding:13px 15px;background:#fbfcfe}
 .candcard.full{grid-column:1/-1}
 .cc-h{display:flex;align-items:center;gap:8px;margin-bottom:11px}
 .cc-h b{font-size:15px;font-weight:800;color:var(--ink)}
@@ -243,7 +244,7 @@ a,label{-webkit-tap-highlight-color:transparent}
 .notice-overlay{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(15,23,42,.55)}
 .notice-toggle:checked~.notice-overlay{display:none}
 .notice-backdrop{position:absolute;inset:0;cursor:pointer}
-.notice-modal{position:relative;z-index:1;background:#fff;border-radius:16px;max-width:420px;width:100%;padding:26px 24px 20px;box-shadow:0 20px 50px rgba(15,23,42,.35);animation:noticePop .25s ease}
+.notice-modal{position:relative;z-index:1;background:#fff;border-radius:14px;max-width:420px;width:100%;padding:26px 24px 20px;box-shadow:0 10px 30px rgba(15,23,42,.18);animation:noticePop .25s ease}
 @keyframes noticePop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
 .notice-badge{display:inline-block;font-size:12px;font-weight:800;color:var(--accent);background:var(--accent-soft);padding:4px 11px;border-radius:999px;margin-bottom:12px}
 .notice-modal h3{font-size:18px;font-weight:800;color:var(--ink);margin:0 0 10px;letter-spacing:-.01em;line-height:1.35}
@@ -281,11 +282,11 @@ a,label{-webkit-tap-highlight-color:transparent}
   <div class="sec">
     <div class="sh"><span class="no">1</span><h2>무엇을 뽑나요</h2></div>
     <p class="sub">이번 선거에서 선출하는 임원·대의원입니다</p>
-    <div class="total"><div class="n">47<span style="font-size:24.5px"> 명</span></div><div class="t">총 선출 인원 (임원 8 + 대의원 39)</div></div>
+    <div class="total"><div class="n"><span id="countTotal" data-target="47">47</span><span style="font-size:24.5px"> 명</span></div><div class="t">총 선출 인원 (임원 8 + 대의원 39)</div></div>
     <input class="sf" type="radio" name="sfocus" id="sf-all" checked><input class="sf" type="radio" name="sfocus" id="sf-jang"><input class="sf" type="radio" name="sfocus" id="sf-gam"><input class="sf" type="radio" name="sfocus" id="sf-isa"><input class="sf" type="radio" name="sfocus" id="sf-a"><input class="sf" type="radio" name="sfocus" id="sf-b"><input class="sf" type="radio" name="sfocus" id="sf-c">
-    <div class="seatwrap"><svg viewBox="0 0 260 141" style="width:100%;max-width:440px;height:auto;display:block;margin:8px auto 2px"><circle class="seat s-jang" cx="130" cy="127" r="7" fill="#ff2d8e"/><polygon class="seat s-jang" points="130.00,122.60 131.09,125.50 134.18,125.64 131.76,127.57 132.59,130.56 130.00,128.85 127.41,130.56 128.24,127.57 125.82,125.64 128.91,125.50" fill="#fff"/><circle class="seat s-gam" cx="169.0" cy="117.1" r="7" fill="#a855f7"/><circle class="seat s-isa" cx="161.3" cy="101.1" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="147.4" cy="90.0" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="130.0" cy="86.0" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="112.6" cy="90.0" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="98.7" cy="101.1" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="91.0" cy="117.1" r="7" fill="#3b6dff"/><circle class="seat s-a" cx="191.2" cy="116.3" r="7" fill="#0d9488"/><circle class="seat s-a" cx="185.2" cy="97.9" r="7" fill="#0d9488"/><circle class="seat s-a" cx="173.8" cy="82.2" r="7" fill="#0d9488"/><circle class="seat s-a" cx="158.1" cy="70.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="139.7" cy="64.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="120.3" cy="64.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="101.9" cy="70.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="86.2" cy="82.2" r="7" fill="#0d9488"/><circle class="seat s-a" cx="74.8" cy="97.9" r="7" fill="#0d9488"/><circle class="seat s-a" cx="68.8" cy="116.3" r="7" fill="#0d9488"/><circle class="seat s-a" cx="213.4" cy="115.9" r="7" fill="#0d9488"/><circle class="seat s-a" cx="208.5" cy="96.2" r="7" fill="#0d9488"/><circle class="seat s-a" cx="199.1" cy="78.3" r="7" fill="#0d9488"/><circle class="seat s-a" cx="185.7" cy="63.1" r="7" fill="#0d9488"/><circle class="seat s-b" cx="169.0" cy="51.6" r="7" fill="#10b981"/><circle class="seat s-b" cx="150.1" cy="44.4" r="7" fill="#10b981"/><circle class="seat s-b" cx="130.0" cy="42.0" r="7" fill="#10b981"/><circle class="seat s-b" cx="109.9" cy="44.4" r="7" fill="#10b981"/><circle class="seat s-b" cx="91.0" cy="51.6" r="7" fill="#10b981"/><circle class="seat s-b" cx="74.3" cy="63.1" r="7" fill="#10b981"/><circle class="seat s-b" cx="60.9" cy="78.3" r="7" fill="#10b981"/><circle class="seat s-b" cx="51.5" cy="96.2" r="7" fill="#10b981"/><circle class="seat s-b" cx="46.6" cy="115.9" r="7" fill="#10b981"/><circle class="seat s-b" cx="235.5" cy="115.6" r="7" fill="#10b981"/><circle class="seat s-b" cx="231.4" cy="95.2" r="7" fill="#10b981"/><circle class="seat s-b" cx="223.5" cy="76.0" r="7" fill="#10b981"/><circle class="seat s-b" cx="211.9" cy="58.8" r="7" fill="#10b981"/><circle class="seat s-b" cx="197.2" cy="44.1" r="7" fill="#10b981"/><circle class="seat s-c" cx="180.0" cy="32.5" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="160.8" cy="24.6" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="140.4" cy="20.5" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="119.6" cy="20.5" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="99.2" cy="24.6" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="80.0" cy="32.5" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="62.8" cy="44.1" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="48.1" cy="58.8" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="36.5" cy="76.0" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="28.6" cy="95.2" r="7" fill="#f59e0b"/><circle class="seat s-c" cx="24.5" cy="115.6" r="7" fill="#f59e0b"/></svg></div>
+    <div class="seatwrap"><svg viewBox="0 0 260 141" style="width:100%;max-width:440px;height:auto;display:block;margin:8px auto 2px"><circle class="seat s-jang" cx="130" cy="127" r="7" fill="#ff2d8e"/><polygon class="seat s-jang" points="130.00,122.60 131.09,125.50 134.18,125.64 131.76,127.57 132.59,130.56 130.00,128.85 127.41,130.56 128.24,127.57 125.82,125.64 128.91,125.50" fill="#fff"/><circle class="seat s-gam" cx="169.0" cy="117.1" r="7" fill="#a855f7"/><circle class="seat s-isa" cx="161.3" cy="101.1" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="147.4" cy="90.0" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="130.0" cy="86.0" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="112.6" cy="90.0" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="98.7" cy="101.1" r="7" fill="#3b6dff"/><circle class="seat s-isa" cx="91.0" cy="117.1" r="7" fill="#3b6dff"/><circle class="seat s-a" cx="191.2" cy="116.3" r="7" fill="#0d9488"/><circle class="seat s-a" cx="185.2" cy="97.9" r="7" fill="#0d9488"/><circle class="seat s-a" cx="173.8" cy="82.2" r="7" fill="#0d9488"/><circle class="seat s-a" cx="158.1" cy="70.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="139.7" cy="64.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="120.3" cy="64.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="101.9" cy="70.8" r="7" fill="#0d9488"/><circle class="seat s-a" cx="86.2" cy="82.2" r="7" fill="#0d9488"/><circle class="seat s-a" cx="74.8" cy="97.9" r="7" fill="#0d9488"/><circle class="seat s-a" cx="68.8" cy="116.3" r="7" fill="#0d9488"/><circle class="seat s-a" cx="213.4" cy="115.9" r="7" fill="#0d9488"/><circle class="seat s-a" cx="208.5" cy="96.2" r="7" fill="#0d9488"/><circle class="seat s-a" cx="199.1" cy="78.3" r="7" fill="#0d9488"/><circle class="seat s-a" cx="185.7" cy="63.1" r="7" fill="#0d9488"/><circle class="seat s-b" cx="169.0" cy="51.6" r="7" fill="var(--success)"/><circle class="seat s-b" cx="150.1" cy="44.4" r="7" fill="var(--success)"/><circle class="seat s-b" cx="130.0" cy="42.0" r="7" fill="var(--success)"/><circle class="seat s-b" cx="109.9" cy="44.4" r="7" fill="var(--success)"/><circle class="seat s-b" cx="91.0" cy="51.6" r="7" fill="var(--success)"/><circle class="seat s-b" cx="74.3" cy="63.1" r="7" fill="var(--success)"/><circle class="seat s-b" cx="60.9" cy="78.3" r="7" fill="var(--success)"/><circle class="seat s-b" cx="51.5" cy="96.2" r="7" fill="var(--success)"/><circle class="seat s-b" cx="46.6" cy="115.9" r="7" fill="var(--success)"/><circle class="seat s-b" cx="235.5" cy="115.6" r="7" fill="var(--success)"/><circle class="seat s-b" cx="231.4" cy="95.2" r="7" fill="var(--success)"/><circle class="seat s-b" cx="223.5" cy="76.0" r="7" fill="var(--success)"/><circle class="seat s-b" cx="211.9" cy="58.8" r="7" fill="var(--success)"/><circle class="seat s-b" cx="197.2" cy="44.1" r="7" fill="var(--success)"/><circle class="seat s-c" cx="180.0" cy="32.5" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="160.8" cy="24.6" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="140.4" cy="20.5" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="119.6" cy="20.5" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="99.2" cy="24.6" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="80.0" cy="32.5" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="62.8" cy="44.1" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="48.1" cy="58.8" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="36.5" cy="76.0" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="28.6" cy="95.2" r="7" fill="var(--warning)"/><circle class="seat s-c" cx="24.5" cy="115.6" r="7" fill="var(--warning)"/></svg></div>
     <p class="hemi-cap">맨 앞 <b style="color:#ff2d8e">★조합장</b>, 그 뒤 <b style="color:#a855f7">감사·이사</b>(집행부), 바깥 호에 <b style="color:#0d9488">대의원 39명</b>이 펼쳐진 구성 · <b>역할(아래 칩·카드)을 누르면</b> 해당 의석만 강조됩니다</p>
-    <div class="hemi-lg"><label class="lgchip" for="sf-all">전체 보기</label><label class="lgchip" for="sf-jang"><i style="background:#ff2d8e"></i>조합장★ 1</label><label class="lgchip" for="sf-gam"><i style="background:#a855f7"></i>감사 1</label><label class="lgchip" for="sf-isa"><i style="background:#3b6dff"></i>이사 6</label><label class="lgchip" for="sf-a"><i style="background:#0d9488"></i>대의원 A 14</label><label class="lgchip" for="sf-b"><i style="background:#10b981"></i>대의원 B 14</label><label class="lgchip" for="sf-c"><i style="background:#f59e0b"></i>대의원 C 11</label></div>
+    <div class="hemi-lg"><label class="lgchip" for="sf-all">전체 보기</label><label class="lgchip" for="sf-jang"><i style="background:#ff2d8e"></i>조합장★ 1</label><label class="lgchip" for="sf-gam"><i style="background:#a855f7"></i>감사 1</label><label class="lgchip" for="sf-isa"><i style="background:#3b6dff"></i>이사 6</label><label class="lgchip" for="sf-a"><i style="background:#0d9488"></i>대의원 A 14</label><label class="lgchip" for="sf-b"><i style="background:var(--success)"></i>대의원 B 14</label><label class="lgchip" for="sf-c"><i style="background:var(--warning)"></i>대의원 C 11</label></div>
     <div class="roles"><label class="role lead" for="sf-jang"><div class="role-h"><svg class="dot" viewBox="0 0 16 16" style="vertical-align:middle"><circle cx="8" cy="8" r="8" fill="#ff2d8e"/><polygon points="8.00,3.40 9.14,6.44 12.37,6.58 9.84,8.60 10.70,11.72 8.00,9.93 5.30,11.72 6.16,8.60 3.63,6.58 6.86,6.44" fill="#fff"/></svg><b>조합장</b><span class="role-n">1<small>명</small></span></div><div class="dots"><svg class="dot" viewBox="0 0 16 16" style="vertical-align:middle"><circle cx="8" cy="8" r="8" fill="#ff2d8e"/><polygon points="8.00,3.40 9.14,6.44 12.37,6.58 9.84,8.60 10.70,11.72 8.00,9.93 5.30,11.72 6.16,8.60 3.63,6.58 6.86,6.44" fill="#fff"/></svg></div></label><label class="role" for="sf-gam"><div class="role-h"><span class="dot c-gam"></span><b>감사</b><span class="role-n">1<small>명</small></span></div><div class="dots"><span class="dot c-gam"></span></div></label><label class="role" for="sf-isa"><div class="role-h"><span class="dot c-isa"></span><b>이사</b><span class="role-n">6<small>명</small></span></div><div class="dots"><span class="dot c-isa"></span><span class="dot c-isa"></span><span class="dot c-isa"></span><span class="dot c-isa"></span><span class="dot c-isa"></span><span class="dot c-isa"></span></div></label><label class="role" for="sf-a"><div class="role-h"><span class="dot c-a"></span><b>대의원 · A동</b><span class="role-n">14<small>명</small></span></div><div class="dots"><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span><span class="dot c-a"></span></div></label><label class="role" for="sf-b"><div class="role-h"><span class="dot c-b"></span><b>대의원 · B동</b><span class="role-n">14<small>명</small></span></div><div class="dots"><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span><span class="dot c-b"></span></div></label><label class="role" for="sf-c"><div class="role-h"><span class="dot c-c"></span><b>대의원 · C동</b><span class="role-n">11<small>명</small></span></div><div class="dots"><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span><span class="dot c-c"></span></div></label></div>
 
     <div class="cand">
@@ -319,13 +320,13 @@ a,label{-webkit-tap-highlight-color:transparent}
     <div class="alloc">
       <div class="bar">
         <div class="seg" style="flex:14;background:#0d9488">A동 14</div>
-        <div class="seg" style="flex:14;background:#10b981">B동 14</div>
-        <div class="seg" style="flex:11;background:#f59e0b">C동 11</div>
+        <div class="seg" style="flex:14;background:var(--success)">B동 14</div>
+        <div class="seg" style="flex:11;background:var(--warning)">C동 11</div>
       </div>
       <div class="lg">
         <span><i style="background:#0d9488"></i>A동 14명</span>
-        <span><i style="background:#10b981"></i>B동 14명</span>
-        <span><i style="background:#f59e0b"></i>C동 11명</span>
+        <span><i style="background:var(--success)"></i>B동 14명</span>
+        <span><i style="background:var(--warning)"></i>C동 11명</span>
         <span>합계 39명</span>
       </div>
     </div>
@@ -360,7 +361,7 @@ a,label{-webkit-tap-highlight-color:transparent}
         <div class="gplot">
           <div class="gline" style="left:5.0%"></div><div class="gline" style="left:16.667%"></div><div class="gline" style="left:28.333%"></div><div class="gline" style="left:40.0%"></div><div class="gline" style="left:51.667%"></div><div class="gline" style="left:63.333%"></div><div class="gline" style="left:75.0%"></div><div class="gline" style="left:86.667%"></div><div class="gline" style="left:98.333%"></div>
           <div class="gvline" style="left:84.167%"></div>
-          <div class="gdot" style="top:7px;left:0.833%;color:#0f172a">◆</div><div class="gdot" style="top:41px;left:5.833%;color:#475569">◆</div><div class="gbar" style="top:77px;left:6.667%;width:13.333%;background:#3b6dff"></div><div class="gbar" style="top:111px;left:20.0%;width:5.0%;background:#0d9488"></div><div class="gdot" style="top:143px;left:20.833%;color:#475569">◆</div><div class="gdot" style="top:177px;left:29.167%;color:#3b6dff">◆</div><div class="gdot" style="top:211px;left:54.167%;color:#7c3aed">◆</div><div class="gdot" style="top:245px;left:59.167%;color:#475569">◆</div><div class="gbar" style="top:281px;left:60.0%;width:23.333%;background:#7c3aed"></div><div class="gdot" style="top:313px;left:84.167%;color:#ef4444">◆</div>
+          <div class="gdot" style="top:7px;left:0.833%;color:#0f172a">◆</div><div class="gdot" style="top:41px;left:5.833%;color:#475569">◆</div><div class="gbar" style="top:77px;left:6.667%;width:13.333%;background:#3b6dff"></div><div class="gbar" style="top:111px;left:20.0%;width:5.0%;background:#0d9488"></div><div class="gdot" style="top:143px;left:20.833%;color:#475569">◆</div><div class="gdot" style="top:177px;left:29.167%;color:#3b6dff">◆</div><div class="gdot" style="top:211px;left:54.167%;color:#7c3aed">◆</div><div class="gdot" style="top:245px;left:59.167%;color:#475569">◆</div><div class="gbar" style="top:281px;left:60.0%;width:23.333%;background:#7c3aed"></div><div class="gdot" style="top:313px;left:84.167%;color:var(--danger)">◆</div>
         </div>
       </div>
       <div class="glegend"><span>◆ 주요 시점</span><span style="color:#3b6dff">▬ 명단·후보 등록</span><span style="color:#0d9488">▬ 자격 확인</span><span style="color:#7c3aed">▬ 투표</span><span><i class="ln"></i>선거일(8/22)</span></div>
@@ -597,4 +598,32 @@ a,label{-webkit-tap-highlight-color:transparent}
   <footer>여의도 수정아파트 재건축정비구역 조합설립주민협의체 선거관리위원회 · 조합 창립총회 선거 안내<br>본 안내는 이해를 돕기 위한 요약이며, 세부 사항은 선거관리계획·규정을 따릅니다.</footer>
 </div>
 <script>(function(){function r(){var c=document.getElementById('noticeClose');if(c)c.checked=false;}window.addEventListener('pageshow',r);r();})();</script>
+<script>(function(){
+  var el=document.getElementById('countTotal');
+  if(!el) return;
+  var target=parseInt(el.getAttribute('data-target'),10)||0, done=false;
+  function animate(){
+    if(done) return; done=true;
+    var dur=1100, start=null;
+    el.textContent='0';
+    function step(ts){
+      if(!start) start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      var eased=1-Math.pow(1-p,3);
+      el.textContent=Math.round(eased*target);
+      if(p<1) requestAnimationFrame(step); else el.textContent=target;
+    }
+    requestAnimationFrame(step);
+  }
+  function noticeOpen(){ var o=document.querySelector('.notice-overlay'); return !!o && getComputedStyle(o).display!=='none'; }
+  document.addEventListener('click',function(e){
+    if(e.target&&e.target.closest&&e.target.closest('.notice-close-btn, .notice-backdrop')) setTimeout(animate,200);
+  });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(ents){
+      ents.forEach(function(en){ if(en.isIntersecting&&!noticeOpen()) animate(); });
+    },{threshold:0.5});
+    io.observe(el);
+  } else { if(!noticeOpen()) animate(); }
+})();</script>
 </body></html>
