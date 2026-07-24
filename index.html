@@ -272,6 +272,12 @@ label.candcard{cursor:pointer}
 .sheet-list li{font-size:14.5px;color:var(--text);line-height:1.6;margin-bottom:3px}
 .sheet-empty{font-size:14px;color:var(--faint);background:#f9fafb;border:1px dashed var(--line);border-radius:10px;padding:12px 14px;margin:0}
 .sheet-note{margin-top:12px;font-size:13.5px;font-weight:600;color:#b45309;background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 13px}
+.flyer-thumb{width:100%;border-radius:12px;border:1px solid var(--line);display:block;margin-top:2px;cursor:zoom-in}
+.flyer-hint{font-size:12px;color:var(--muted);margin-top:7px;text-align:center}
+.flyer-view{position:fixed;inset:0;z-index:300;background:rgba(2,6,23,.93);display:none;overflow:auto;padding:24px 12px;-webkit-overflow-scrolling:touch}
+.flyer-view.open{display:block}
+.flyer-view img{display:block;width:100%;max-width:820px;height:auto;margin:0 auto;border-radius:6px}
+.flyer-close{position:fixed;top:14px;right:14px;width:40px;height:40px;border:none;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;font-size:20px;line-height:1;cursor:pointer;z-index:301}
 </style></head><body>
 
 
@@ -634,6 +640,7 @@ label.candcard{cursor:pointer}
   <div id="sheetBody"></div>
   <div class="sheet-close-btn" id="sheetClose" role="button" tabindex="0">닫기</div>
 </div>
+<div class="flyer-view" id="flyerView"><button class="flyer-close" id="flyerClose" aria-label="닫기">&times;</button><img id="flyerImg" alt="공보물 전체보기"></div>
 <script>(function(){
   // ===== 후보 검증란(학력/경력) 데이터 — 내용 확정되면 edu(학력)/career(경력) 배열만 채우세요 =====
   var CAND={
@@ -650,6 +657,9 @@ label.candcard{cursor:pointer}
     'isa-8':{name:'김인섭',role:'이사 후보 · 기호 8',edu:[],career:[]},
     'isa-9':{name:'안영우',role:'이사 후보 · 기호 9',edu:[],career:[]}
   };
+  // ===== 개인 공보물 이미지 (후보키: 이미지 경로) — 이미지 받는 대로 여기에 추가 =====
+  var FLYERS={
+  };
   var ov=document.getElementById('sheetOv'),sheet=document.getElementById('sheet'),body=document.getElementById('sheetBody');
   function esc(t){return String(t).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
   function list(a){return a&&a.length?'<ul class="sheet-list">'+a.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>':'<p class="sheet-empty">확정되는 대로 업데이트됩니다.</p>';}
@@ -657,7 +667,7 @@ label.candcard{cursor:pointer}
     body.innerHTML='<div class="sheet-name">'+esc(c.name)+'</div><div class="sheet-role">'+esc(c.role||'')+'</div>'+(c.note?'<div class="sheet-note">\uD83D\uDD0E '+esc(c.note)+'</div>':'')
       +'<div class="sheet-verify">&#10004; 검증란 (선관위 확인)</div>'
       +'<div class="sheet-sec"><h4>학력</h4>'+list(c.edu)+'</div>'
-      +'<div class="sheet-sec"><h4>경력</h4>'+list(c.career)+'</div>';
+      +'<div class="sheet-sec"><h4>경력</h4>'+list(c.career)+'</div>'+(FLYERS[k]?'<div class="sheet-sec"><h4>개인 공보물</h4><img class="flyer-thumb" src="'+FLYERS[k]+'" alt="'+esc(c.name)+' 공보물" loading="lazy"><div class="flyer-hint">탭하면 전체화면으로 봅니다</div></div>':'');
     ov.classList.add('open');sheet.classList.add('open');document.body.style.overflow='hidden';}
   function close(){ov.classList.remove('open');sheet.classList.remove('open');document.body.style.overflow='';}
   document.querySelectorAll('.pers:not(.plain)').forEach(function(ch){
@@ -665,10 +675,16 @@ label.candcard{cursor:pointer}
     ch.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();var k=ch.getAttribute('data-cand');if(k)open(k);});
     ch.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();var k=ch.getAttribute('data-cand');if(k)open(k);}});
   });
+  var fv=document.getElementById('flyerView'),fimg=document.getElementById('flyerImg');
+  function openFlyer(src){fimg.src=src;fv.classList.add('open');}
+  function closeFlyer(){fv.classList.remove('open');fimg.removeAttribute('src');}
+  body.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('.flyer-thumb');if(t)openFlyer(t.getAttribute('src'));});
+  fv.addEventListener('click',function(e){if(e.target===fv)closeFlyer();});
+  document.getElementById('flyerClose').addEventListener('click',closeFlyer);
   ov.addEventListener('click',close);
   var sc=document.getElementById('sheetClose');
   sc.addEventListener('click',close);
   sc.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();close();}});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(fv.classList.contains('open'))closeFlyer();else close();}});
 })();</script>
 </body></html>
