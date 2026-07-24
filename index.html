@@ -268,6 +268,22 @@ label.candcard{cursor:pointer}
 .teaser-cap{position:absolute;left:0;right:0;bottom:0;padding:28px 15px 13px;background:linear-gradient(to top,rgba(2,6,23,.85),rgba(2,6,23,0));color:#fff}
 .teaser-cap .tt{font-size:15px;font-weight:800;letter-spacing:-.01em}
 .teaser-cap .ts{font-size:12px;opacity:.85;margin-top:3px}
+.pers:not(.plain){cursor:pointer}
+.pers:not(.plain)::after{content:'\203A';color:var(--muted);font-weight:800;font-size:15px;margin-left:1px;line-height:1}
+.sheet-ov{position:fixed;inset:0;background:rgba(2,6,23,.5);opacity:0;visibility:hidden;transition:opacity .25s ease;z-index:100}
+.sheet-ov.open{opacity:1;visibility:visible}
+.sheet{position:fixed;left:50%;bottom:0;width:100%;max-width:620px;transform:translate(-50%,100%);background:var(--card);border-radius:20px 20px 0 0;padding:6px 22px 30px;box-shadow:0 -8px 40px rgba(2,6,23,.25);z-index:101;max-height:85vh;overflow-y:auto;transition:transform .3s cubic-bezier(.32,.72,0,1)}
+.sheet.open{transform:translate(-50%,0)}
+.sheet-grip{width:42px;height:4px;border-radius:2px;background:var(--line);margin:8px auto 16px}
+.sheet-close{position:absolute;top:14px;right:16px;width:30px;height:30px;border:none;background:#f1f5f9;border-radius:50%;color:var(--muted);font-size:13px;cursor:pointer;line-height:1}
+.sheet-name{font-size:21px;font-weight:800;color:var(--ink)}
+.sheet-role{font-size:13px;color:var(--muted);margin-top:2px}
+.sheet-verify{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;color:#047857;background:#ecfdf5;border:1px solid #a7f3d0;padding:4px 10px;border-radius:999px}
+.sheet-sec{margin-top:16px}
+.sheet-sec h4{font-size:13px;color:var(--muted);font-weight:700;margin-bottom:7px}
+.sheet-list{margin:0;padding-left:18px}
+.sheet-list li{font-size:14.5px;color:var(--text);line-height:1.6;margin-bottom:3px}
+.sheet-empty{font-size:14px;color:var(--faint);background:#f9fafb;border:1px dashed var(--line);border-radius:10px;padding:12px 14px;margin:0}
 </style></head><body>
 
 <input type="checkbox" id="noticeClose" class="notice-toggle" aria-hidden="true" autocomplete="off">
@@ -308,15 +324,15 @@ label.candcard{cursor:pointer}
       <div class="cand-grid">
         <label class="candcard" for="sf-jang" style="--cc:#ff2d8e">
           <div class="cc-h"><span class="dot" style="background:#ff2d8e"></span><b>조합장</b><span class="cc-sel">1명 선출</span></div>
-          <div class="cc-list"><span class="pers"><i>1</i>권 훈</span><span class="pers"><i>2</i>어 준</span></div>
+          <div class="cc-list"><span class="pers" data-cand="gjang-1"><i>1</i>권 훈</span><span class="pers" data-cand="gjang-2"><i>2</i>어 준</span></div>
         </label>
         <label class="candcard" for="sf-gam" style="--cc:#a855f7">
           <div class="cc-h"><span class="dot" style="background:#a855f7"></span><b>감사</b><span class="cc-sel">1명 선출</span></div>
-          <div class="cc-list"><span class="pers win"><i>1</i>배정한</span><span class="wbadge">단독 출마 · 가·부 투표</span></div>
+          <div class="cc-list"><span class="pers win" data-cand="gam-1"><i>1</i>배정한</span><span class="wbadge">단독 출마 · 가·부 투표</span></div>
         </label>
         <label class="candcard full" for="sf-isa" style="--cc:#3b6dff">
           <div class="cc-h"><span class="dot" style="background:#3b6dff"></span><b>이사</b><span class="cc-sel">6명 선출 · 후보 9명</span></div>
-          <div class="cc-list"><span class="pers"><i>1</i>임윤택</span><span class="pers"><i>2</i>서용덕</span><span class="pers"><i>3</i>최성훈</span><span class="pers"><i>4</i>박윤우</span><span class="pers"><i>5</i>정현모</span><span class="pers"><i>6</i>정인영</span><span class="pers"><i>7</i>박정훈</span><span class="pers"><i>8</i>김인섭</span><span class="pers"><i>9</i>안영우</span></div>
+          <div class="cc-list"><span class="pers" data-cand="isa-1"><i>1</i>임윤택</span><span class="pers" data-cand="isa-2"><i>2</i>서용덕</span><span class="pers" data-cand="isa-3"><i>3</i>최성훈</span><span class="pers" data-cand="isa-4"><i>4</i>박윤우</span><span class="pers" data-cand="isa-5"><i>5</i>정현모</span><span class="pers" data-cand="isa-6"><i>6</i>정인영</span><span class="pers" data-cand="isa-7"><i>7</i>박정훈</span><span class="pers" data-cand="isa-8"><i>8</i>김인섭</span><span class="pers" data-cand="isa-9"><i>9</i>안영우</span></div>
         </label>
         <div class="daewrap">
           <label class="candcard" for="sf-a" style="--cc:#0d9488">
@@ -640,5 +656,46 @@ label.candcard{cursor:pointer}
     v.currentTime=Math.max(0, v.currentTime-STEP);   // 역재생 시작(첫 seek)
   });
   v.play().catch(function(){});
+})();</script>
+<div class="sheet-ov" id="sheetOv"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="후보 상세">
+  <div class="sheet-grip"></div>
+  <button class="sheet-close" id="sheetClose" aria-label="닫기">&times;</button>
+  <div id="sheetBody"></div>
+</div>
+<script>(function(){
+  // ===== 후보 검증란(학력/경력) 데이터 — 내용 확정되면 edu(학력)/career(경력) 배열만 채우세요 =====
+  var CAND={
+    'gjang-1':{name:'권 훈',role:'조합장 후보 · 기호 1',edu:[],career:[]},
+    'gjang-2':{name:'어 준',role:'조합장 후보 · 기호 2',edu:[],career:[]},
+    'gam-1':{name:'배정한',role:'감사 후보 · 기호 1',edu:[],career:[]},
+    'isa-1':{name:'임윤택',role:'이사 후보 · 기호 1',edu:[],career:[]},
+    'isa-2':{name:'서용덕',role:'이사 후보 · 기호 2',edu:[],career:[]},
+    'isa-3':{name:'최성훈',role:'이사 후보 · 기호 3',edu:[],career:[]},
+    'isa-4':{name:'박윤우',role:'이사 후보 · 기호 4',edu:[],career:[]},
+    'isa-5':{name:'정현모',role:'이사 후보 · 기호 5',edu:[],career:[]},
+    'isa-6':{name:'정인영',role:'이사 후보 · 기호 6',edu:[],career:[]},
+    'isa-7':{name:'박정훈',role:'이사 후보 · 기호 7',edu:[],career:[]},
+    'isa-8':{name:'김인섭',role:'이사 후보 · 기호 8',edu:[],career:[]},
+    'isa-9':{name:'안영우',role:'이사 후보 · 기호 9',edu:[],career:[]}
+  };
+  var ov=document.getElementById('sheetOv'),sheet=document.getElementById('sheet'),body=document.getElementById('sheetBody');
+  function esc(t){return String(t).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+  function list(a){return a&&a.length?'<ul class="sheet-list">'+a.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>':'<p class="sheet-empty">확정되는 대로 업데이트됩니다.</p>';}
+  function open(k){var c=CAND[k];if(!c)return;
+    body.innerHTML='<div class="sheet-name">'+esc(c.name)+'</div><div class="sheet-role">'+esc(c.role||'')+'</div>'
+      +'<div class="sheet-verify">&#10004; 검증란 (선관위 확인)</div>'
+      +'<div class="sheet-sec"><h4>학력</h4>'+list(c.edu)+'</div>'
+      +'<div class="sheet-sec"><h4>경력</h4>'+list(c.career)+'</div>';
+    ov.classList.add('open');sheet.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){ov.classList.remove('open');sheet.classList.remove('open');document.body.style.overflow='';}
+  document.querySelectorAll('.pers:not(.plain)').forEach(function(ch){
+    ch.setAttribute('role','button');ch.tabIndex=0;
+    ch.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();var k=ch.getAttribute('data-cand');if(k)open(k);});
+    ch.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();var k=ch.getAttribute('data-cand');if(k)open(k);}});
+  });
+  ov.addEventListener('click',close);
+  document.getElementById('sheetClose').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
 })();</script>
 </body></html>
