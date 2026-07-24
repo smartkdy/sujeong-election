@@ -626,17 +626,17 @@ label.candcard{cursor:pointer}
   var v=document.querySelector('.teaser-vid');
   if(!v) return;
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches){ v.loop=true; v.play().catch(function(){}); return; }
-  var reversing=false,last=0;
-  function forward(){ reversing=false; v.play().catch(function(){}); }
-  v.addEventListener('ended',function(){
-    reversing=true; last=0; v.pause();
-    requestAnimationFrame(function step(ts){
-      if(!reversing) return;
-      if(!last) last=ts;
-      var t=v.currentTime-(ts-last)/1000; last=ts;
-      if(t<=0){ v.currentTime=0; forward(); return; }
-      v.currentTime=t; requestAnimationFrame(step);
-    });
+  var STEP=1/12, reversing=false;   // seeked 완료마다 한 프레임씩 되감기(≈12fps)
+  function onSeeked(){
+    if(!reversing) return;
+    var t=v.currentTime-STEP;
+    if(t<=0){ reversing=false; v.currentTime=0; v.play().catch(function(){}); return; }
+    v.currentTime=t;
+  }
+  v.addEventListener('seeked', onSeeked);
+  v.addEventListener('ended', function(){
+    reversing=true; v.pause();
+    v.currentTime=Math.max(0, v.currentTime-STEP);   // 역재생 시작(첫 seek)
   });
   v.play().catch(function(){});
 })();</script>
