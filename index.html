@@ -258,6 +258,13 @@ label.candcard{cursor:pointer}
 .notice-hl b{color:var(--navy)}
 .notice-close-btn{display:block;width:100%;text-align:center;margin-top:18px;padding:13px;background:var(--accent);color:#fff;font-weight:700;font-size:15px;border-radius:999px;cursor:pointer;user-select:none;-webkit-user-select:none}
 .notice-close-btn:hover{filter:brightness(.96)}
+.teaser{display:flex;justify-content:center;margin-top:8px}
+.teaser-card{position:relative;width:100%;max-width:300px;aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#0f172a;box-shadow:0 10px 30px rgba(15,23,42,.20)}
+.teaser-vid{width:100%;height:100%;object-fit:cover;display:block}
+.teaser-badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.30);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;letter-spacing:.03em;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.teaser-cap{position:absolute;left:0;right:0;bottom:0;padding:38px 16px 15px;background:linear-gradient(to top,rgba(2,6,23,.85),rgba(2,6,23,0));color:#fff}
+.teaser-cap .tt{font-size:15px;font-weight:800;letter-spacing:-.01em}
+.teaser-cap .ts{font-size:12px;opacity:.85;margin-top:3px}
 </style></head><body>
 
 <input type="checkbox" id="noticeClose" class="notice-toggle" aria-hidden="true" autocomplete="off">
@@ -327,7 +334,19 @@ label.candcard{cursor:pointer}
   </div>
 
   <div class="sec">
-    <div class="sh"><span class="no">2</span><h2>선거 일정</h2></div>
+    <div class="sh"><span class="no">2</span><h2>조합장 연설회 안내</h2></div>
+    <p class="sub">조합장 후보 합동연설회 개최를 검토하고 있습니다. 일정이 확정되면 이 페이지와 단체방으로 안내드립니다.</p>
+    <div class="teaser">
+      <div class="teaser-card">
+        <video class="teaser-vid" autoplay muted loop playsinline preload="auto"><source src="speech-teaser.mp4" type="video/mp4"></video>
+        <span class="teaser-badge">🎤 예고</span>
+        <div class="teaser-cap"><div class="tt">조합장 후보 합동연설회</div><div class="ts">개최 검토 중 · 확정 시 안내</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sh"><span class="no">3</span><h2>선거 일정</h2></div>
     <p class="sub">2026년 7~8월 · 주요 일정 (후보 등록 상황·회의 일정에 따라 바뀔 수 있음)</p>
     <div class="gantt"><div class="gantt-in">
       <div class="gaxis"><span style="left:0.833%">7/3</span><span style="left:17.5%">7/13</span><span style="left:29.167%">7/20</span><span style="left:54.167%">8/4</span><span style="left:60.833%">8/8</span><span style="left:84.167%">8/22</span><span style="left:99.167%">8/31</span></div>
@@ -345,7 +364,7 @@ label.candcard{cursor:pointer}
   </div>
 
   <div class="sec">
-    <div class="sh"><span class="no">3</span><h2>투표 방법</h2></div>
+    <div class="sh"><span class="no">4</span><h2>투표 방법</h2></div>
     <p class="sub">세 가지 방법 중 편한 방법으로 한 번만 투표하시면 됩니다</p>
     <div class="vote">
       <div class="vcard"><div class="ic">✉️</div><b>우편 투표</b><p>8/8~8/21<br>받은 봉투에 넣어 보내기</p></div>
@@ -356,7 +375,7 @@ label.candcard{cursor:pointer}
   </div>
 
   <div class="sec">
-    <div class="sh"><span class="no">4</span><h2>이런 행위는 ‘부정행위’예요</h2></div>
+    <div class="sh"><span class="no">5</span><h2>이런 행위는 ‘부정행위’예요</h2></div>
     <p class="sub">공정한 선거를 위한 약속입니다 — 선거운동 기간 중 아래 행위를 보시면 <b>바로 선관위에 신고</b>해 주세요</p>
     <div class="case-wrap"><table class="case-tbl"><colgroup><col style="width:5%"><col style="width:22%"><col style="width:44%"><col style="width:13%"><col style="width:16%"></colgroup><thead><tr><th>#</th><th>유형</th><th>구체 사례 (쉽게)</th><th>근거</th><th>제재</th></tr></thead><tbody><tr><td class="n">1</td><td><span class="cat cat-1">등록·추천</span><span class="ty">등록서류 허위·위조</span></td><td>학력·경력이나 소유·거주 자격 증빙을 거짓으로 꾸미거나 위조해 제출. (※ 학력은 졸업증명서, 경력은 건강보험 자격득실확인서만 인정)</td><td><span class="src">제16조③1</span></td><td class="sanc">등록취소·당선무효</td></tr><tr><td class="n">2</td><td><span class="cat cat-1">등록·추천</span><span class="ty">선거공보 허위·비방 기재</span></td><td>공보(홍보물)에 거짓 약력을 싣거나 상대 후보를 비방하는 내용을 기재.</td><td><span class="src">제30조②·제28조④</span></td><td class="sanc">등록취소·당선무효</td></tr><tr><td class="n">3</td><td><span class="cat cat-3">선거운동</span><span class="ty">상대 후보 허위사실 공표·비방</span></td><td>연설·문자·SNS·벽보로 거짓 사실을 퍼뜨려 상대 후보를 깎아내림.</td><td><span class="src">제28조④</span></td><td class="sanc">등록취소·당선무효<small>형사 소지</small></td></tr><tr><td class="n">4</td><td><span class="cat cat-1">등록·추천</span><span class="ty">추천서 위조·서명 도용</span></td><td>추천인의 동의 없이 서명·지장을 임의로 채워 추천서를 만듦.</td><td><span class="src">제16조③1</span></td><td class="sanc">등록취소</td></tr><tr><td class="n">5</td><td><span class="cat cat-2">매수·기부</span><span class="ty">추천 매수</span></td><td>추천(서명) 대가로 돈·향응을 제공해 추천서를 모음.</td><td><span class="src">제16조③3·제29조</span></td><td class="sanc">등록취소·당선무효<small>형사 소지</small></td></tr><tr><td class="n">6</td><td><span class="cat cat-1">등록·추천</span><span class="ty">본인 추천·중복추천 위반</span></td><td>자기 자신을 추천하거나, 한 선거인이 조합장 후보를 둘 이상 중복 추천.</td><td><span class="src">제24조①</span></td><td class="sanc">추천 무효·등록취소</td></tr><tr><td class="n">7</td><td><span class="cat cat-2">매수·기부</span><span class="ty">선거인 표 매수</span></td><td>찍어달라며 선거인에게 금품·식사·상품권 등을 제공.</td><td><span class="src">제29조①·제28조②</span></td><td class="sanc">등록취소·당선무효<small>형사 소지</small></td></tr><tr><td class="n">8</td><td><span class="cat cat-2">매수·기부</span><span class="ty">매수 수수·승낙 (받는 쪽)</span></td><td>후보 측이 주는 금품·이익을 선거인이 받거나 받기로 약속.</td><td><span class="src">제28조②</span></td><td class="sanc">제공·수수 양쪽 위반</td></tr><tr><td class="n">9</td><td><span class="cat cat-2">매수·기부</span><span class="ty">기부행위 (우회 포함)</span></td><td>후보·가족·관련 회사 명의로 선거인에게 식사·선물·찬조금 등 제공.</td><td><span class="src">제29조①④</span></td><td class="sanc">등록취소·당선무효<small>형사 소지</small></td></tr><tr><td class="n">10</td><td><span class="cat cat-3">선거운동</span><span class="ty">사전 선거운동</span></td><td>후보 확정공고(7/20) 전에 미리 지지를 호소하거나 홍보. (추천서명 확보 등 준비행위는 제외)</td><td><span class="src">제16조③5·제28조⑥</span></td><td class="sanc">등록취소·당선무효</td></tr><tr><td class="n">11</td><td><span class="cat cat-2">매수·기부</span><span class="ty">후보 사퇴·출마포기 매수</span></td><td>다른 후보(또는 입후보 예정자)에게 사퇴하거나 출마를 포기하는 대가로 금품·이익을 제공하거나 약속.</td><td><span class="src">제28조②·제29조</span></td><td class="sanc">등록취소·당선무효<small>형사 소지</small></td></tr><tr><td class="n">12</td><td><span class="cat cat-3">선거운동</span><span class="ty">정해진 방법 외 선거운동</span></td><td>무단 현수막(조합장 후보 외), 호별 방문, 선거용 단톡방 신설, 1일 1회를 초과하는 대량 문자 발송 등 선관위가 정한 방법 밖의 운동.</td><td><span class="src">제28조⑤</span></td><td class="sanc">위반물 삭제·제재·등록취소</td></tr><tr><td class="n">13</td><td><span class="cat cat-3">선거운동</span><span class="ty">야간·대리 전화 운동</span></td><td>밤 10시~아침 7시 전화 발신, 또는 후보 본인이 아닌 사람이 전화운동(대리). (※ 문자는 본인·가족·등록 선거사무원 1인까지 1일 1회, 시간대 제한 없이 가능 — 공유받은 선거인명부로 발송 가능)</td><td><span class="src">제33조①1</span></td><td class="sanc">제재·등록취소</td></tr><tr><td class="n">14</td><td><span class="cat cat-1">등록·추천</span><span class="ty">피선거권 요건 허위</span></td><td>소유 5년/거주 1년 등 자격을 충족하지 못했는데 충족한 것처럼 등록.</td><td><span class="src">제6조·제16조①④</span></td><td class="sanc">등록취소·당선무효</td></tr><tr><td class="n">15</td><td><span class="cat cat-4">투표</span><span class="ty">대리·강요·매수 투표</span></td><td>남의 우편투표지를 대신 작성하거나, 특정 후보 투표를 강요·매수.</td><td><span class="src">제34조</span></td><td class="sanc">해당 투표 무효·당선무효<small>형사 소지</small></td></tr><tr><td class="n">16</td><td><span class="cat cat-1">등록·추천</span><span class="ty">공명선거 서약서 위반</span></td><td>등록 시 제출한 '공명선거 실천 서약'의 내용(비방·금지된 운동 안 함 등)을 어김.</td><td><span class="src">제16조③2</span></td><td class="sanc">등록취소·당선무효</td></tr><tr><td class="n">17</td><td><span class="cat cat-4">투표·기타</span><span class="ty">선거인명부 부정 이용</span></td><td>교부받은 선거인명부를 선거 외 목적으로 쓰거나 타인에게 넘김(양도·대여).</td><td><span class="src">제22조③</span></td><td class="sanc">등록취소·당선무효<small>형사 소지</small></td></tr><tr><td class="n">18</td><td><span class="cat cat-4">투표·기타</span><span class="ty">조합·업체 지위 이용 개입</span></td><td>조합 임직원·계약업체가 중립의무를 어기고 특정 후보를 지원하거나 선거에 개입.</td><td><span class="src">제12조</span></td><td class="sanc">중립의무 위반·직무 배제</td></tr><tr><td class="n">19</td><td><span class="cat cat-4">투표·기타</span><span class="ty">투표용지·투표함 부정</span></td><td>선관위 사인(날인) 없는 용지 사용, 무효표 조작, 투표함 훼손·바꿔치기.</td><td><span class="src">제34·38조</span></td><td class="sanc">해당 투표 무효·당선무효<small>형사 소지</small></td></tr><tr><td class="n">20</td><td><span class="cat cat-3">선거운동</span><span class="ty">선거사무원 정원초과·미등록</span></td><td>선거사무원을 가족 외 1명을 초과해 두거나, 선관위에 등록하지 않은 사람을 선거운동에 동원. (선거사무원은 가족 제외 1명으로 확정)</td><td><span class="src">제33조①6</span></td><td class="sanc">제재·등록취소</td></tr></tbody></table></div>
     <div class="mcnote">※ 위 사례는 선거관리규정(안) v4 조항을 근거로 한 예시이며, 실제 위반 여부·제재 수위는 사실관계와 선관위 의결, 관련 법령(공직선거법 준용 등)에 따릅니다. 적발 시 선관위는 5일 이내 의결로 등록취소·당선무효를 결정하며, 결정 전 해당 후보에게 3일 범위의 소명 기회를 부여합니다(제16조④⑤).</div>
