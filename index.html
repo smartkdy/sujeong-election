@@ -269,13 +269,14 @@ label.candcard{cursor:pointer}
 .teaser-cap .tt{font-size:15px;font-weight:800;letter-spacing:-.01em}
 .teaser-cap .ts{font-size:12px;opacity:.85;margin-top:3px}
 .pers:not(.plain){cursor:pointer}
-.pers:not(.plain)::after{content:'\203A';color:var(--muted);font-weight:800;font-size:15px;margin-left:1px;line-height:1}
+.pers:not(.plain)::after{content:'';box-sizing:border-box;width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg);margin-left:4px;flex:0 0 auto;opacity:.6}
 .sheet-ov{position:fixed;inset:0;background:rgba(2,6,23,.5);opacity:0;visibility:hidden;transition:opacity .25s ease;z-index:100}
 .sheet-ov.open{opacity:1;visibility:visible}
-.sheet{position:fixed;left:50%;bottom:0;width:100%;max-width:620px;transform:translate(-50%,100%);background:var(--card);border-radius:20px 20px 0 0;padding:6px 22px 30px;box-shadow:0 -8px 40px rgba(2,6,23,.25);z-index:101;max-height:85vh;overflow-y:auto;transition:transform .3s cubic-bezier(.32,.72,0,1)}
+.sheet{position:fixed;left:50%;bottom:0;width:100%;max-width:620px;transform:translate(-50%,100%);background:var(--card);border-radius:24px 24px 0 0;padding:6px 22px 24px;box-shadow:0 -8px 40px rgba(2,6,23,.25);z-index:101;max-height:85vh;overflow-y:auto;transition:transform .3s cubic-bezier(.32,.72,0,1)}
 .sheet.open{transform:translate(-50%,0)}
 .sheet-grip{width:42px;height:4px;border-radius:2px;background:var(--line);margin:8px auto 16px}
-.sheet-close{position:absolute;top:14px;right:16px;width:30px;height:30px;border:none;background:#f1f5f9;border-radius:50%;color:var(--muted);font-size:13px;cursor:pointer;line-height:1}
+.sheet-close-btn{display:block;width:100%;text-align:center;margin-top:22px;padding:13px;background:var(--accent);color:#fff;font-weight:700;font-size:15px;border-radius:999px;cursor:pointer;user-select:none;-webkit-user-select:none}
+.sheet-close-btn:hover{filter:brightness(.96)}
 .sheet-name{font-size:21px;font-weight:800;color:var(--ink)}
 .sheet-role{font-size:13px;color:var(--muted);margin-top:2px}
 .sheet-verify{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;color:#047857;background:#ecfdf5;border:1px solid #a7f3d0;padding:4px 10px;border-radius:999px}
@@ -660,8 +661,8 @@ label.candcard{cursor:pointer}
 <div class="sheet-ov" id="sheetOv"></div>
 <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="후보 상세">
   <div class="sheet-grip"></div>
-  <button class="sheet-close" id="sheetClose" aria-label="닫기">&times;</button>
   <div id="sheetBody"></div>
+  <div class="sheet-close-btn" id="sheetClose" role="button" tabindex="0">닫기</div>
 </div>
 <script>(function(){
   // ===== 후보 검증란(학력/경력) 데이터 — 내용 확정되면 edu(학력)/career(경력) 배열만 채우세요 =====
@@ -695,7 +696,9 @@ label.candcard{cursor:pointer}
     ch.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();var k=ch.getAttribute('data-cand');if(k)open(k);}});
   });
   ov.addEventListener('click',close);
-  document.getElementById('sheetClose').addEventListener('click',close);
+  var sc=document.getElementById('sheetClose');
+  sc.addEventListener('click',close);
+  sc.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();close();}});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
 })();</script>
 </body></html>
