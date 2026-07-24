@@ -271,6 +271,7 @@ label.candcard{cursor:pointer}
 .sheet-list{margin:0;padding-left:18px}
 .sheet-list li{font-size:14.5px;color:var(--text);line-height:1.6;margin-bottom:3px}
 .sheet-empty{font-size:14px;color:var(--faint);background:#f9fafb;border:1px dashed var(--line);border-radius:10px;padding:12px 14px;margin:0}
+.sheet-note{margin-top:12px;font-size:13.5px;font-weight:600;color:#b45309;background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 13px}
 </style></head><body>
 
 
@@ -639,10 +640,10 @@ label.candcard{cursor:pointer}
     'gjang-1':{name:'권 훈',role:'조합장 후보 · 기호 1',edu:['서울대학교 금속공학 학사','KAIST 재료공학 석사·박사'],career:['국민대학교 신소재공학부 교수 (34년 재직)','(현) 국민대학교 산학협력단 연구원']},
     'gjang-2':{name:'어 준',role:'조합장 후보 · 기호 2',edu:['고려대학교 경영학 석사 (2000.8)'],career:['(주)동원투자신탁운용 (2000.7~2005.7)','(주)한국투자신탁운용 (2005.7~2011.11)','(주)삼성생명 (2012.3~2015.1)','(주)삼성자산운용 (2015.1~2021.1)','(주)신영자산운용 (2021.1~2024.1)']},
     'gam-1':{name:'배정한',role:'감사 후보 · 기호 1',edu:['경남대학교 경영학과 졸업'],career:['전) BNK경남은행']},
-    'isa-1':{name:'임윤택',role:'이사 후보 · 기호 1',edu:[],career:[]},
-    'isa-2':{name:'서용덕',role:'이사 후보 · 기호 2',edu:[],career:[]},
-    'isa-3':{name:'최성훈',role:'이사 후보 · 기호 3',edu:[],career:[]},
-    'isa-4':{name:'박윤우',role:'이사 후보 · 기호 4',edu:[],career:[]},
+    'isa-1':{name:'임윤택',role:'이사 후보 · 기호 1',edu:[],career:['현) 파로스 에스엔씨','전) 포스코 DX']},
+    'isa-2':{name:'서용덕',role:'이사 후보 · 기호 2',edu:[],career:['하나증권 (구. 대한투자신탁) · 17년','신한생명보험 · 17년']},
+    'isa-3':{name:'최성훈',role:'이사 후보 · 기호 3',note:'현재 학력·경력 검증이 진행 중입니다.',edu:[],career:[]},
+    'isa-4':{name:'박윤우',role:'이사 후보 · 기호 4',edu:['동국대학교 약학과 졸업'],career:['약국 운영 중 (2022년~현재)']},
     'isa-5':{name:'정현모',role:'이사 후보 · 기호 5',edu:[],career:[]},
     'isa-6':{name:'정인영',role:'이사 후보 · 기호 6',edu:[],career:[]},
     'isa-7':{name:'박정훈',role:'이사 후보 · 기호 7',edu:[],career:[]},
@@ -653,7 +654,7 @@ label.candcard{cursor:pointer}
   function esc(t){return String(t).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
   function list(a){return a&&a.length?'<ul class="sheet-list">'+a.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>':'<p class="sheet-empty">확정되는 대로 업데이트됩니다.</p>';}
   function open(k){var c=CAND[k];if(!c)return;
-    body.innerHTML='<div class="sheet-name">'+esc(c.name)+'</div><div class="sheet-role">'+esc(c.role||'')+'</div>'
+    body.innerHTML='<div class="sheet-name">'+esc(c.name)+'</div><div class="sheet-role">'+esc(c.role||'')+'</div>'+(c.note?'<div class="sheet-note">\uD83D\uDD0E '+esc(c.note)+'</div>':'')
       +'<div class="sheet-verify">&#10004; 검증란 (선관위 확인)</div>'
       +'<div class="sheet-sec"><h4>학력</h4>'+list(c.edu)+'</div>'
       +'<div class="sheet-sec"><h4>경력</h4>'+list(c.career)+'</div>';
