@@ -265,7 +265,7 @@ label.candcard{cursor:pointer}
 .sheet-close-btn:hover{filter:brightness(.96)}
 .sheet-name{font-size:21px;font-weight:800;color:var(--ink)}
 .sheet-role{font-size:13px;color:var(--muted);margin-top:2px}
-.sheet-meta{font-size:13px;color:var(--text);font-weight:600;margin-top:5px}
+.sheet-basic{font-size:14.5px;color:var(--text);line-height:1.6;margin:0}
 .sheet-verify{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;color:#047857;background:#ecfdf5;border:1px solid #a7f3d0;padding:4px 10px;border-radius:999px}
 .sheet-sec{margin-top:16px}
 .sheet-sec h4{font-size:13px;color:var(--muted);font-weight:700;margin-bottom:7px}
@@ -673,8 +673,8 @@ label.candcard{cursor:pointer}
   function esc(t){return String(t).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
   function list(a){return a&&a.length?'<ul class="sheet-list">'+a.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>':'<p class="sheet-empty">확정되는 대로 업데이트됩니다.</p>';}
   function open(k){var c=CAND[k];if(!c)return;
-    body.innerHTML='<div class="sheet-name">'+esc(c.name)+'</div><div class="sheet-role">'+esc(c.role||'')+'</div>'+(c.meta?'<div class="sheet-meta">'+esc(c.meta)+'</div>':'')+(c.note?'<div class="sheet-note">\uD83D\uDD0E '+esc(c.note)+'</div>':'')
-      +'<div class="sheet-verify">&#10004; 검증란 (선관위 확인)</div>'
+    body.innerHTML='<div class="sheet-name">'+esc(c.name)+'</div><div class="sheet-role">'+esc(c.role||'')+'</div>'+(c.note?'<div class="sheet-note">\uD83D\uDD0E '+esc(c.note)+'</div>':'')
+      +'<div class="sheet-verify">&#10004; 검증란 (선관위 확인)</div>'+(c.meta?'<div class="sheet-sec"><h4>기본정보</h4><p class="sheet-basic">'+esc(c.meta)+'</p></div>':'')
       +'<div class="sheet-sec"><h4>학력</h4>'+list(c.edu)+'</div>'
       +'<div class="sheet-sec"><h4>경력</h4>'+list(c.career)+'</div>'+(function(){var fl=FLYERS[k];if(!fl)return '';var a=[].concat(fl);return '<div class="sheet-sec"><h4>개인 공보물</h4>'+a.map(function(src,i){return '<img class="flyer-thumb" src="'+src+'" alt="'+esc(c.name)+' 공보물 '+(i+1)+'" loading="lazy">';}).join('')+'<div class="flyer-hint">탭하면 전체화면으로 봅니다</div></div>';})();
     ov.classList.add('open');sheet.classList.add('open');document.body.style.overflow='hidden';}
