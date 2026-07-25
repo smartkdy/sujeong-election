@@ -272,7 +272,7 @@ label.candcard{cursor:pointer}
 .sheet-list li{font-size:14.5px;color:var(--text);line-height:1.6;margin-bottom:3px}
 .sheet-empty{font-size:14px;color:var(--faint);background:#f9fafb;border:1px dashed var(--line);border-radius:10px;padding:12px 14px;margin:0}
 .sheet-note{margin-top:12px;font-size:13.5px;font-weight:600;color:#b45309;background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 13px}
-.flyer-thumb{width:100%;border-radius:12px;border:1px solid var(--line);display:block;margin-top:2px;cursor:zoom-in}
+.flyer-thumb{width:100%;border-radius:12px;border:1px solid var(--line);display:block;margin-top:8px;cursor:zoom-in}
 .flyer-hint{font-size:12px;color:var(--muted);margin-top:7px;text-align:center}
 .flyer-view{position:fixed;inset:0;z-index:300;background:rgba(2,6,23,.93);display:none;overflow:auto;padding:24px 12px;-webkit-overflow-scrolling:touch}
 .flyer-view.open{display:block}
@@ -659,9 +659,9 @@ label.candcard{cursor:pointer}
   };
   // ===== 개인 공보물 이미지 (후보키: 이미지 경로) — 이미지 받는 대로 여기에 추가 =====
   var FLYERS={
-    'gjang-1':'flyers/gjang-1.jpg',
-    'gjang-2':'flyers/gjang-2.jpg',
-    'gam-1':'flyers/gam-1.jpg',
+    'gjang-1':['flyers/gjang-1.jpg','flyers/gjang-1-2.jpg'],
+    'gjang-2':['flyers/gjang-2.jpg','flyers/gjang-2-2.jpg'],
+    'gam-1':['flyers/gam-1.jpg','flyers/gam-1-2.jpg'],
     'isa-1':'flyers/isa-1.jpg',
     'isa-4':'flyers/isa-4.jpg',
     'isa-5':'flyers/isa-5.jpg',
@@ -675,7 +675,7 @@ label.candcard{cursor:pointer}
     body.innerHTML='<div class="sheet-name">'+esc(c.name)+'</div><div class="sheet-role">'+esc(c.role||'')+'</div>'+(c.note?'<div class="sheet-note">\uD83D\uDD0E '+esc(c.note)+'</div>':'')
       +'<div class="sheet-verify">&#10004; 검증란 (선관위 확인)</div>'
       +'<div class="sheet-sec"><h4>학력</h4>'+list(c.edu)+'</div>'
-      +'<div class="sheet-sec"><h4>경력</h4>'+list(c.career)+'</div>'+(FLYERS[k]?'<div class="sheet-sec"><h4>개인 공보물</h4><img class="flyer-thumb" src="'+FLYERS[k]+'" alt="'+esc(c.name)+' 공보물" loading="lazy"><div class="flyer-hint">탭하면 전체화면으로 봅니다</div></div>':'');
+      +'<div class="sheet-sec"><h4>경력</h4>'+list(c.career)+'</div>'+(function(){var fl=FLYERS[k];if(!fl)return '';var a=[].concat(fl);return '<div class="sheet-sec"><h4>개인 공보물</h4>'+a.map(function(src,i){return '<img class="flyer-thumb" src="'+src+'" alt="'+esc(c.name)+' 공보물 '+(i+1)+'" loading="lazy">';}).join('')+'<div class="flyer-hint">탭하면 전체화면으로 봅니다</div></div>';})();
     ov.classList.add('open');sheet.classList.add('open');document.body.style.overflow='hidden';}
   function close(){ov.classList.remove('open');sheet.classList.remove('open');document.body.style.overflow='';}
   document.querySelectorAll('.pers:not(.plain)').forEach(function(ch){
