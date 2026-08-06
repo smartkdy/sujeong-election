@@ -96,7 +96,10 @@ body{background:var(--bg);color:var(--text);line-height:1.55;font-size:15.5px;-w
 .gl{height:34px;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;text-align:right;padding-right:12px}
 .gl b{font-size:12.5px;color:var(--ink);font-weight:700;line-height:1.25}
 .gl small{font-size:11px;color:var(--muted)}
-.gplot{position:relative;flex:1;height:340px}
+.gplot{position:relative;flex:1;height:408px}
+.gl.key b{color:var(--danger)}
+.gl.key small{color:var(--danger);font-weight:600;opacity:.9}
+.note.key{background:#fef2f2;border-left-color:var(--danger);color:#7f1d1d}
 .gline{position:absolute;top:0;bottom:0;width:1px;background:var(--line)}
 .gvline{position:absolute;top:0;bottom:0;border-left:1.5px dashed var(--danger);opacity:.7}
 .gbar{position:absolute;height:16px;border-radius:6px}
@@ -388,15 +391,16 @@ label.candcard{cursor:pointer}
     <div class="gantt"><div class="gantt-in">
       <div class="gaxis"><span style="left:0.833%">7/3</span><span style="left:17.5%">7/13</span><span style="left:29.167%">7/20</span><span style="left:54.167%">8/4</span><span style="left:60.833%">8/8</span><span style="left:84.167%">8/22</span><span style="left:99.167%">8/31</span></div>
       <div class="gbody">
-        <div class="glabels"><div class="gl"><b>협의체 4차회의</b><small>7/3 (금) · 계획 확정</small></div><div class="gl"><b>후보 등록 공고</b><small>7/6 (월)</small></div><div class="gl"><b>후보 등록</b><small>7/7~7/14</small></div><div class="gl"><b>후보 자격 심사</b><small>7/15~7/17</small></div><div class="gl"><b>기호 배정</b><small>7/15 (수)</small></div><div class="gl"><b>후보·선거일 확정</b><small>7/20 (월)</small></div><div class="gl"><b>5차회의 개최 통지</b><small>7/24 (금)</small></div><div class="gl"><b>협의체 5차회의</b><small>8/4 (화) · 안건 의결</small></div><div class="gl"><b>안내문·투표용지 발송</b><small>8/7 (금)</small></div><div class="gl"><b>우편·전자 투표</b><small>8/8~8/21</small></div><div class="gl"><b>선거·당선자 공고</b><small>8/22 (토)</small></div></div>
+        <div class="glabels"><div class="gl"><b>협의체 4차회의</b><small>7/3 (금) · 계획 확정</small></div><div class="gl"><b>후보 등록 공고</b><small>7/6 (월)</small></div><div class="gl"><b>후보 등록</b><small>7/7~7/14</small></div><div class="gl"><b>후보 자격 심사</b><small>7/15~7/17</small></div><div class="gl"><b>기호 배정</b><small>7/15 (수)</small></div><div class="gl"><b>후보·선거일 확정</b><small>7/20 (월)</small></div><div class="gl"><b>5차회의 개최 통지</b><small>7/24 (금)</small></div><div class="gl"><b>협의체 5차회의</b><small>8/4 (화) · 안건 의결</small></div><div class="gl"><b>안내문·투표용지 발송</b><small>8/7 (금)</small></div><div class="gl"><b>우편·전자 투표</b><small>8/8~8/21</small></div><div class="gl key"><b>🗳️ 총회</b><small>8/22 (토) · 최종 확정</small></div><div class="gl"><b>선거·당선자 공고</b><small>8/22 (토)</small></div></div>
         <div class="gplot">
           <div class="gline" style="left:5.0%"></div><div class="gline" style="left:16.667%"></div><div class="gline" style="left:28.333%"></div><div class="gline" style="left:40.0%"></div><div class="gline" style="left:51.667%"></div><div class="gline" style="left:63.333%"></div><div class="gline" style="left:75.0%"></div><div class="gline" style="left:86.667%"></div><div class="gline" style="left:98.333%"></div>
           <div class="gvline" style="left:84.167%"></div>
-          <div class="gdot" style="top:7px;left:0.833%;color:#0f172a">◆</div><div class="gdot" style="top:41px;left:5.833%;color:#475569">◆</div><div class="gbar" style="top:77px;left:6.667%;width:13.333%;background:#3b6dff"></div><div class="gbar" style="top:111px;left:20.0%;width:5.0%;background:#0d9488"></div><div class="gdot" style="top:143px;left:20.833%;color:#475569">◆</div><div class="gdot" style="top:177px;left:29.167%;color:#3b6dff">◆</div><div class="gdot" style="top:211px;left:35.833%;color:#475569">◆</div><div class="gdot" style="top:245px;left:54.167%;color:#7c3aed">◆</div><div class="gdot" style="top:279px;left:59.167%;color:#475569">◆</div><div class="gbar" style="top:315px;left:60.0%;width:23.333%;background:#7c3aed"></div><div class="gdot" style="top:347px;left:84.167%;color:var(--danger)">◆</div>
+          <div class="gdot" style="top:7px;left:0.833%;color:#0f172a">◆</div><div class="gdot" style="top:41px;left:5.833%;color:#475569">◆</div><div class="gbar" style="top:77px;left:6.667%;width:13.333%;background:#3b6dff"></div><div class="gbar" style="top:111px;left:20.0%;width:5.0%;background:#0d9488"></div><div class="gdot" style="top:143px;left:20.833%;color:#475569">◆</div><div class="gdot" style="top:177px;left:29.167%;color:#3b6dff">◆</div><div class="gdot" style="top:211px;left:35.833%;color:#475569">◆</div><div class="gdot" style="top:245px;left:54.167%;color:#7c3aed">◆</div><div class="gdot" style="top:279px;left:59.167%;color:#475569">◆</div><div class="gbar" style="top:315px;left:60.0%;width:23.333%;background:#7c3aed"></div><div class="gdot" style="top:345px;left:84.167%;color:var(--danger);font-size:18px">★</div><div class="gdot" style="top:381px;left:84.167%;color:var(--danger)">◆</div>
         </div>
       </div>
-      <div class="glegend"><span>◆ 주요 시점</span><span style="color:#3b6dff">▬ 명단·후보 등록</span><span style="color:#0d9488">▬ 자격 확인</span><span style="color:#7c3aed">▬ 투표</span><span><i class="ln"></i>선거일(8/22)</span></div>
+      <div class="glegend"><span>◆ 주요 시점</span><span style="color:#3b6dff">▬ 명단·후보 등록</span><span style="color:#0d9488">▬ 자격 확인</span><span style="color:#7c3aed">▬ 투표</span><span style="color:var(--danger);font-weight:700">★ 총회(8/22)</span><span><i class="ln"></i>선거일(8/22)</span></div>
     </div></div>
+    <div class="note key">🗳️ <b>8월 22일(토) 총회</b>는 이번 선거의 <b>최종 절차</b>입니다. 후보가 1명인 직위도 <b>총회의 찬·반 투표</b>로 당선이 결정되므로, 조합원 여러분의 참석이 중요합니다.</div>
     <div class="note">🎤 <b>조합장 후보 합동연설회</b>는 <b>개최 완료</b>되었습니다. 후보별 연설 영상은 상단 <b>[🎤 합동연설회]</b> 탭에서 보실 수 있습니다.</div>
   </div>
 
