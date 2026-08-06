@@ -160,7 +160,7 @@ body{background:var(--bg);color:var(--text);line-height:1.55;font-size:15.5px;-w
 .case-tbl.q3t{min-width:0;font-size:13.5px}
 .case-tbl.q3t td:first-child{word-break:keep-all;line-height:1.4}
 @media(max-width:560px){.case-tbl.q3t{font-size:13px}.case-tbl.q3t col:first-child{width:96px!important}}
-@media(max-width:560px){.tabnav{gap:0}.tabnav label{flex:1 1 0;min-width:0;text-align:center;white-space:normal;word-break:keep-all;font-size:14px;line-height:1.3;letter-spacing:-.02em;padding:9px 4px}}
+@media(max-width:560px){.tabnav .te{display:none}.tabnav{gap:0}.tabnav label{flex:1 1 0;min-width:0;text-align:center;white-space:normal;word-break:keep-all;font-size:14px;line-height:1.3;letter-spacing:-.02em;padding:9px 4px}}
 .rmini{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.55}
 .rmini b{color:var(--ink)}
 .cautlist{list-style:none;display:flex;flex-direction:column;gap:7px;margin:0;padding:0}
@@ -288,7 +288,7 @@ label.candcard{cursor:pointer}
 </div>
 
 <div class="wrap">
-  <input class="mt" type="radio" name="maintab" id="tab-0" checked><input class="mt" type="radio" name="maintab" id="tab-1"><input class="mt" type="radio" name="maintab" id="tab-2"><input class="mt" type="radio" name="maintab" id="tab-3"><input class="mt" type="radio" name="maintab" id="tab-4"><div class="tabnav"><label for="tab-0">🎤 합동연설회</label><label for="tab-1">📋 선거 안내</label><label for="tab-2">📝 후보 등록</label><label for="tab-3">📢 선거운동 Q&amp;A</label><label for="tab-4">📄 신고·소명</label></div>
+  <input class="mt" type="radio" name="maintab" id="tab-0" checked><input class="mt" type="radio" name="maintab" id="tab-1"><input class="mt" type="radio" name="maintab" id="tab-2"><input class="mt" type="radio" name="maintab" id="tab-3"><input class="mt" type="radio" name="maintab" id="tab-4"><div class="tabnav"><label for="tab-0"><span class="te">🎤 </span>합동연설회</label><label for="tab-1"><span class="te">📋 </span>선거 안내</label><label for="tab-2"><span class="te">📝 </span>후보 등록</label><label for="tab-3"><span class="te">📢 </span>선거운동 Q&amp;A</label><label for="tab-4"><span class="te">📄 </span>신고·소명</label></div>
 
   <div class="tabpane" id="pane-0">
 
