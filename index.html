@@ -666,13 +666,12 @@ label.candcard{cursor:pointer}
 <script>(function(){
   var el=document.getElementById('countTotal');
   if(!el) return;
-  var target=parseInt(el.getAttribute('data-target'),10)||0, done=false;
+  var target=parseInt(el.getAttribute('data-target'),10)||0, running=false;
   function noticeOpen(){ var o=document.querySelector('.notice-overlay'); return !!o && getComputedStyle(o).display!=='none'; }
-  document.addEventListener('click',function(e){
-    if(e.target&&e.target.closest&&e.target.closest('.notice-close-btn, .notice-backdrop')) setTimeout(animate,200);
-  });
+  function visible(){ return !!el.offsetParent; }   // 탭이 display:none 이면 null
   function animate(){
-    if(done) return; done=true;
+    if(running || !visible() || noticeOpen()) return;   // 안 보이는 동안엔 소모하지 않음
+    running=true;
     var dur=1100, start=null;
     el.textContent='0';
     function step(ts){
@@ -680,16 +679,24 @@ label.candcard{cursor:pointer}
       var p=Math.min((ts-start)/dur,1);
       var eased=1-Math.pow(1-p,3);
       el.textContent=Math.round(eased*target);
-      if(p<1) requestAnimationFrame(step); else el.textContent=target;
+      if(p<1) requestAnimationFrame(step); else { el.textContent=target; running=false; }
     }
     requestAnimationFrame(step);
   }
+  var t1=document.getElementById('tab-1');
+  function onTab(){ if(t1&&t1.checked) setTimeout(animate,80); }
+  document.querySelectorAll('input.mt').forEach(function(r){ r.addEventListener('change',onTab); });
+  var lb=document.querySelector('.tabnav label[for=tab-1]');
+  if(lb) lb.addEventListener('click',function(){ setTimeout(animate,120); });
+  document.addEventListener('click',function(e){
+    if(e.target&&e.target.closest&&e.target.closest('.notice-close-btn, .notice-backdrop')) setTimeout(animate,200);
+  });
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(ents){
-      ents.forEach(function(en){ if(en.isIntersecting&&!noticeOpen()) animate(); });
+      ents.forEach(function(en){ if(en.isIntersecting) animate(); });
     },{threshold:0.5});
     io.observe(el);
-  } else { if(!noticeOpen()) animate(); }
+  } else { animate(); }
 })();</script>
 <script>(function(){
   var v=document.querySelector('.teaser-vid');
