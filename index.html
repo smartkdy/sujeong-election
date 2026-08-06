@@ -206,6 +206,23 @@ a,label{-webkit-tap-highlight-color:transparent}
 .cand-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .candcard{border:1px solid var(--line);border-radius:14px;padding:13px 15px;background:#fbfcfe}
 .candcard.full{grid-column:1/-1}
+.notice-toggle{position:absolute;width:0;height:0;opacity:0;pointer-events:none}
+.notice-overlay{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(15,23,42,.55)}
+.notice-toggle:checked~.notice-overlay{display:none}
+.notice-backdrop{position:absolute;inset:0;cursor:pointer}
+.notice-modal{position:relative;z-index:1;background:#fff;border-radius:14px;max-width:420px;width:100%;padding:26px 24px 20px;box-shadow:0 10px 30px rgba(15,23,42,.18);animation:noticePop .25s ease}
+@keyframes noticePop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+.notice-badge{display:inline-block;font-size:12px;font-weight:800;color:var(--accent);background:var(--accent-soft);padding:4px 11px;border-radius:999px;margin-bottom:12px}
+.notice-modal h3{font-size:18px;font-weight:800;color:var(--ink);margin:0 0 10px;letter-spacing:-.01em;line-height:1.35}
+.notice-modal p{font-size:14px;line-height:1.65;color:var(--text);margin:0 0 10px}
+.notice-modal .em{color:var(--ink)}
+.notice-hl{background:#eff4ff;border-left:3px solid var(--accent);border-radius:0 9px 9px 0;padding:11px 14px;font-size:13.5px;color:#1e3a5f;line-height:1.6;margin:12px 0 4px}
+.notice-hl b{color:var(--navy)}
+.notice-hl .d{display:block;font-size:16px;font-weight:800;letter-spacing:-.01em;margin-top:2px}
+.notice-hl.key{background:#fef2f2;border-left-color:var(--danger);color:#7f1d1d;margin-top:9px}
+.notice-hl.key b,.notice-hl.key .d{color:#b91c1c}
+.notice-close-btn{display:block;width:100%;text-align:center;margin-top:18px;padding:13px;background:var(--accent);color:#fff;font-weight:700;font-size:15px;border-radius:999px;cursor:pointer;user-select:none;-webkit-user-select:none}
+.notice-close-btn:hover{filter:brightness(.96)}
 label.candcard{cursor:pointer}
 #sf-jang:checked~.cand label[for=sf-jang],#sf-gam:checked~.cand label[for=sf-gam],#sf-isa:checked~.cand label[for=sf-isa],#sf-a:checked~.cand label[for=sf-a],#sf-b:checked~.cand label[for=sf-b],#sf-c:checked~.cand label[for=sf-c]{outline:1.5px solid var(--accent);outline-offset:-1.5px}
 .cc-dots{display:flex;flex-wrap:wrap;gap:5px;margin-top:3px}.cc-dots .d{width:12px;height:12px;border-radius:50%;display:block}
@@ -302,6 +319,19 @@ label.candcard{cursor:pointer}
 .flyer-view img{display:block;width:100%;max-width:820px;height:auto;margin:0 auto;border-radius:6px}
 .flyer-close{position:fixed;top:14px;right:14px;width:40px;height:40px;border:none;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;font-size:20px;line-height:1;cursor:pointer;z-index:301}
 </style></head><body>
+<input type="checkbox" id="noticeClose" class="notice-toggle" aria-hidden="true" autocomplete="off">
+<div class="notice-overlay" role="dialog" aria-modal="true" aria-labelledby="noticeTitle">
+  <label for="noticeClose" class="notice-backdrop" aria-label="공지 닫기"></label>
+  <div class="notice-modal">
+    <span class="notice-badge">📢 선관위 안내</span>
+    <h3 id="noticeTitle">투표기간과 총회 일시를 꼭 확인해 주세요</h3>
+    <p>이번 선거는 <b class="em">우편·전자 투표</b> 후 <b class="em">총회</b>에서 최종 확정됩니다. 아래 일정을 놓치지 않도록 유의해 주세요.</p>
+    <div class="notice-hl">🗳️ <b>우편·전자 투표</b><span class="d">8월 8일(토) ~ 8월 21일(금)</span></div>
+    <div class="notice-hl key">🏛️ <b>총회</b><span class="d">8월 22일(토)</span></div>
+    <p style="margin-top:12px">후보가 1명인 직위도 <b class="em">총회의 찬·반 투표</b>로 당선이 결정됩니다. 조합원 여러분의 <b class="em">총회 참석</b>이 중요합니다.</p>
+    <label for="noticeClose" class="notice-close-btn">닫기</label>
+  </div>
+</div>
 
 
 <div class="hero">
@@ -632,10 +662,15 @@ label.candcard{cursor:pointer}
 
   <footer>여의도 수정아파트 재건축정비구역 조합설립주민협의체 선거관리위원회 · 조합 창립총회 선거 안내<br>본 안내는 이해를 돕기 위한 요약이며, 세부 사항은 선거관리계획·규정을 따릅니다.</footer>
 </div>
+<script>(function(){function r(){var c=document.getElementById('noticeClose');if(c)c.checked=false;}window.addEventListener('pageshow',r);r();})();</script>
 <script>(function(){
   var el=document.getElementById('countTotal');
   if(!el) return;
   var target=parseInt(el.getAttribute('data-target'),10)||0, done=false;
+  function noticeOpen(){ var o=document.querySelector('.notice-overlay'); return !!o && getComputedStyle(o).display!=='none'; }
+  document.addEventListener('click',function(e){
+    if(e.target&&e.target.closest&&e.target.closest('.notice-close-btn, .notice-backdrop')) setTimeout(animate,200);
+  });
   function animate(){
     if(done) return; done=true;
     var dur=1100, start=null;
@@ -651,10 +686,10 @@ label.candcard{cursor:pointer}
   }
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(ents){
-      ents.forEach(function(en){ if(en.isIntersecting) animate(); });
+      ents.forEach(function(en){ if(en.isIntersecting&&!noticeOpen()) animate(); });
     },{threshold:0.5});
     io.observe(el);
-  } else { animate(); }
+  } else { if(!noticeOpen()) animate(); }
 })();</script>
 <script>(function(){
   var v=document.querySelector('.teaser-vid');
