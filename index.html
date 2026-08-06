@@ -192,7 +192,7 @@ footer{text-align:center;color:var(--faint);font-size:12.5px;padding:8px 18px 0;
 /* in-app webview 안정화 */
 body{overflow-x:hidden}
 a,label{-webkit-tap-highlight-color:transparent}
-.tabnav label,.subnav label,.sfnav label,a.callbtn{touch-action:manipulation;-webkit-user-select:none;user-select:none}
+.tabnav label,.subnav label,.sfnav label,a.callbtn,a.ytbtn{touch-action:manipulation;-webkit-user-select:none;user-select:none}
 .callbtn.mail{background:var(--navy,#0f2a52);box-shadow:0 2px 6px rgba(15,42,82,.2);margin-left:8px}
 @media(max-width:560px){.report .callbtn{display:block;margin-left:auto;margin-right:auto;width:max-content;max-width:100%}}
 .cand{margin-top:22px;border-top:1px dashed var(--line);padding-top:18px}
@@ -253,6 +253,11 @@ label.candcard{cursor:pointer}
 .vname i{font-style:normal;font-size:13px;font-weight:600;color:var(--muted);margin-left:4px}
 .vframe{position:relative;width:100%;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#0f172a;box-shadow:0 4px 14px rgba(15,23,42,.10)}
 .vframe iframe{position:absolute;left:0;top:0;width:100%;height:100%;border:0}
+.ytcta{margin-top:20px;background:var(--accent-soft);border:1px solid #dbe3ff;border-radius:12px;padding:17px 18px 18px;text-align:center}
+.ytcta .ytt{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+.ytcta .yts{font-size:13.5px;color:var(--muted);margin-top:5px;line-height:1.6}
+.ytbtn{display:inline-flex;align-items:center;gap:7px;margin-top:13px;background:#f00;color:#fff;font-weight:800;font-size:15px;padding:11px 20px;border-radius:999px;text-decoration:none;box-shadow:0 2px 8px rgba(255,0,0,.22)}
+.ytbtn:active{background:#c00}
 .vlink{display:inline-block;margin-top:8px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
 .vlink:hover{text-decoration:underline}
 .teaser{margin-top:8px}
@@ -316,6 +321,11 @@ label.candcard{cursor:pointer}
         <div class="vframe"><iframe src="https://www.youtube-nocookie.com/embed/3ZRDRWkzUEg" title="기호 2번 어준 조합장 후보 합동연설회" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
         <a class="vlink" href="https://www.youtube.com/watch?v=3ZRDRWkzUEg" target="_blank" rel="noopener">유튜브에서 보기 ↗</a>
       </div>
+    </div>
+    <div class="ytcta">
+      <div class="ytt">더 자세한 영상을 보고 싶으시다면</div>
+      <div class="yts">선관위 유튜브 채널에서 전체 영상을 보실 수 있습니다.</div>
+      <a class="ytbtn" href="https://www.youtube.com/@sujeongapt-election" target="_blank" rel="noopener">▶ 유튜브 채널 바로가기</a>
     </div>
     <div class="note">🎤 선관위 주최로 진행된 <b>조합장 후보 합동연설회</b> 영상입니다. 후보 간 형평을 위해 <b>기호 순서대로 동일한 조건</b>으로 게시했습니다.</div>
   </div>
